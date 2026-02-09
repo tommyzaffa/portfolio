@@ -3,15 +3,14 @@
 
 :root{
   --bg-x-desktop: 50;
-  --bg-y-desktop: 50;
+  --bg-y-desktop: 0;
 
   --bg-x-ipad-landscape: 100;
   --bg-y-ipad-landscape: 0;
 
-  /* Mobile / iPad portrait (bottom-sheet) background controls */
-  --bg-x-mobile: 0;          /* 0 = left, 100 = right */
-  --bg-y-mobile: 100;           /* 0 = top, 100 = bottom */
-  --bg-y-mobile-px: -200;      /* extra vertical nudge in px (can be negative) */
+  --bg-x-mobile: 0;
+  --bg-y-mobile: 100;
+  --bg-y-mobile-px: -200;
 }
 
 /* GENERAL SETTINGS */
@@ -36,7 +35,7 @@ body::before {
     background-image: url('../images/background_page_1.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: right top; /* fallback */
+    background-position: right top;
     background-position-x: calc(var(--bg-x-desktop, 100) * 1%);
     background-position-y: calc(var(--bg-y-desktop, 0) * 1%);
 }
@@ -106,7 +105,6 @@ p
     color: orange;
     transition: color 0.3s ease;
 }
-/* MOUSE EVENT OF LEFT SIDE OF THE PAGE */
 /* END OF LEFT SIDE OF THE PAGE */
 
 /* RIGHT SIDE OF THE PAGE */
@@ -347,7 +345,7 @@ body::-webkit-scrollbar {
     background-image: url('../images/background_page_1.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: right top; /* fallback */
+    background-position: right top;
     background-position-x: calc(var(--bg-x-mobile, 55) * 1%);
     background-position-y: calc(var(--bg-y-mobile, 0) * 1% + (var(--bg-y-mobile-px, 0) * 1px));
     z-index: -1;
