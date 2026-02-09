@@ -8,9 +8,9 @@
   --bg-x-ipad-landscape: 100;
   --bg-y-ipad-landscape: 0;
 
-  --bg-x-mobile: 0;
-  --bg-y-mobile: 100;
-  --bg-y-mobile-px: -200;
+  --bg-x-mobile: 55;
+  --bg-y-mobile: 200;
+  --bg-y-mobile-px: -80;
 }
 
 /* GENERAL SETTINGS */
