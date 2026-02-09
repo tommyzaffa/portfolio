@@ -1,6 +1,19 @@
 /* FONT */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
+:root{
+  --bg-x-desktop: 50;
+  --bg-y-desktop: 0;
+
+  --bg-x-ipad-landscape: 100;
+  --bg-y-ipad-landscape: 0;
+
+  /* Mobile / iPad portrait (bottom-sheet) background controls */
+  --bg-x-mobile: 0;          /* 0 = left, 100 = right */
+  --bg-y-mobile: 100;           /* 0 = top, 100 = bottom */
+  --bg-y-mobile-px: -200;      /* extra vertical nudge in px (can be negative) */
+}
+
 /* GENERAL SETTINGS */
 body {
     margin: 0;
@@ -23,7 +36,7 @@ body::before {
     background-image: url('../images/background_page_1.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: right top;
+    background-position: calc(var(--bg-x-desktop, 100) * 1%) calc(var(--bg-y-desktop, 0) * 1%);
 }
 
 html, body {
@@ -192,12 +205,128 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-/* MOBILE LAYOUT */
-
-@media (max-width: 900px) {
+/* IPAD PORTRAIT LAYOUT (VERTICAL) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   :root{
-    --bg-x-mobile: 55;
-    --bg-y-mobile: -80;
+    --edu-right: 17%;
+    --edu-top: 15%;
+
+    --music-right: 50%;
+    --music-top: 12%;
+
+    --shortfilms-right: 5%;
+    --shortfilms-top: 40%;
+
+    --jobs-right: 25%;
+    --jobs-top: 28%;
+
+    --contact-right: 20%;
+    --contact-top: 48%;
+  }
+
+  #education{
+    right: var(--edu-right) !important;
+    top: var(--edu-top) !important;
+  }
+
+  #music{
+    right: var(--music-right) !important;
+    top: var(--music-top) !important;
+  }
+
+  #short_films{
+    right: var(--shortfilms-right) !important;
+    top: var(--shortfilms-top) !important;
+  }
+
+  #jobs_stages{
+    right: var(--jobs-right) !important;
+    top: var(--jobs-top) !important;
+  }
+
+  #contact{
+    right: var(--contact-right) !important;
+    top: var(--contact-top) !important;
+  }
+}
+/* END IPAD PORTRAIT LAYOUT */
+
+/* IPAD LANDSCAPE LAYOUT (HORIZONTAL) - DESKTOP-LIKE */
+@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+  :root{
+    /* Desktop-like corridor width on iPad landscape */
+    --menu-w: clamp(320px, 26vw, 420px);
+  }
+
+  /* Make it behave like desktop but fit iPad width */
+  body {
+    min-width: 0;
+    overflow: hidden; /* prevent page scroll; menu will scroll */
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  body::before{
+    /* Shift the photo so the corridor sits better over the image */
+    background-position: calc(var(--bg-x-ipad-landscape, 100) * 1% - (var(--menu-w) / 2)) calc(var(--bg-y-ipad-landscape, 0) * 1%);
+  }
+
+  /* Reset the mobile “bottom sheet” menu behavior */
+  #menu {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+
+    transform: none !important;
+    transition: none !important;
+
+    width: var(--menu-w);
+    height: 100vh;
+
+    padding: 28px;
+    margin-right: auto;
+
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.95);
+    overflow-y: auto;
+    box-shadow: none;
+  }
+
+  /* If the sheet markup exists, hide the handle and normalize the content spacing */
+  .sheet-handle{
+    display: none !important;
+  }
+
+  .sheet-content{
+    padding: 40px 0 40px 0 !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Slightly scale typography/padding for iPad */
+  h1 { font-size: 26px; }
+  h2 { font-size: 20px; letter-spacing: 1px; }
+  h3 { font-size: 17px; letter-spacing: 1px; }
+  p  { font-size: 15px; line-height: 1.65; }
+
+  /* Anchor the 5 labels to the viewport (photo), not to the scrolling menu */
+  #education, #music, #short_films, #jobs_stages, #contact{
+    position: fixed !important;
+  }
+
+  /* Desktop-like positions (you can tweak these if needed) */
+  #education{ right: 23%; top: 55%; }
+  #music{ right: 32%; top: 66%; }
+  #short_films{ right: 5%; top: 71%; }
+  #jobs_stages{ right: 10%; top: 47%; }
+  #contact{ right: 13%; top: 87%; }
+}
+/* END IPAD LANDSCAPE LAYOUT */
+
+/* MOBILE LAYOUT */
+@media (max-width: 1024px) and (orientation: portrait) and (hover: none) and (pointer: coarse) {
+  :root{
   }
 
   html{
@@ -222,7 +351,7 @@ body::-webkit-scrollbar {
     background-image: url('../images/background_page_1.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: calc(var(--bg-x-mobile, 55) * 1%) calc(var(--bg-y-mobile, 0) * 1px);
+    background-position: calc(var(--bg-x-mobile, 55) * 1%) calc(var(--bg-y-mobile, 0) * 1% + (var(--bg-y-mobile-px, 0) * 1px));
     z-index: -1;
   }
 
