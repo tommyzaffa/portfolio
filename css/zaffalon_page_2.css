@@ -1,0 +1,449 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* GENERAL SETTINGS */
+body {
+    margin: 0;
+    min-height: 100vh;
+    min-width: 1400px;
+    overflow-x: auto;
+    position: relative;
+    background: transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+
+    background-image: url('../images/background_page_2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left top;
+}
+
+html, body {
+    height: 100%;
+}
+
+html
+{
+    height: 100%;
+}
+
+a:link
+{
+    text-decoration: none;
+}
+/* END OF GENERAL SETTINGS */
+
+/* RIGHT SIDE OF THE PAGE SETTINGS */
+#education_section {
+    width: 26%;
+    padding: 40px;
+    margin-left: auto;
+    text-align: center;
+    font-family: 'Roboto';
+    color: #444444;
+    background: rgba(255, 255, 255, 0.95);
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+h1
+{
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #333333;
+    transition: color 0.3s ease;
+}
+
+h2
+{
+    margin-bottom: 15px;
+    letter-spacing: 1.5px;
+    color: #333333;
+    transition: color 0.3s ease;
+}
+
+h3
+{
+    margin-bottom: 15px;
+    letter-spacing: 1.5px;
+    color: #333333;
+    transition: color 0.3s ease;
+}
+
+p
+{
+    line-height: 1.6;  
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+/* END OF RIGHT SIDE OF THE PAGE SETTINGS */
+
+/* LINKS */
+#liceo_lugano_1
+{
+    font-style: italic;
+    color: #444444;
+    text-decoration: underline;
+}
+
+#conservatorio_internazionale_scienze_audiovisive
+{
+    font-style: italic;
+    color: #444444;
+    text-decoration: underline;
+}
+
+#università_svizzera_italiana
+{
+    font-style: italic;
+    color: #444444;
+    text-decoration: underline;
+}
+
+a:link
+{
+    text-decoration: none;
+}
+/* END OF LINKS */
+
+/* MOUSE EVENTS */
+#education:hover h1 
+{
+    color: orange;
+    transition: color 0.3s ease;
+}
+
+#education:hover p 
+{
+    color: orange;
+    transition: color 0.3s ease;
+}
+
+#lilu1:hover h2 
+{
+    color: orange;
+    transition: color 0.3s ease;
+}
+
+#lilu1:hover p 
+{
+    color: orange;
+    transition: color 0.3s ease;
+}
+
+#liceo_lugano_1:hover
+{
+    color: rgb(206, 73, 1);
+    transition: color 0.3s ease;
+}
+
+#cisa:hover h2 
+{
+    color: orange;
+    transition: color 0.3s ease;
+}
+
+#cisa:hover p 
+{
+    color: orange;
+    transition: color 0.3s ease;
+}
+
+#conservatorio_internazionale_scienze_audiovisive:hover
+{
+    color: rgb(206, 73, 1);
+    transition: color 0.3s ease;
+}
+
+#usi:hover h2 
+{
+    color: orange;
+    transition: color 0.3s ease;
+}
+
+#usi:hover p 
+{
+    color: orange;
+    transition: color 0.3s ease;
+}
+
+#università_svizzera_italiana:hover
+{
+    color: rgb(206, 73, 1);
+    transition: color 0.3s ease;
+}
+
+#la_sapienza:hover h2 
+{
+    color: orange;
+    transition: color 0.3s ease;
+}
+
+#la_sapienza:hover p 
+{
+    color: orange;
+    transition: color 0.3s ease;
+}
+
+#home:hover h3
+{
+    color: orange;
+    transition: color 0.3s ease;
+}
+/* END OF MOUSE EVENTS */
+
+/* ICONS */
+.icon
+{
+    width: 15%;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+    transition: transform 0.5s ease;
+}
+
+.icon:hover
+{
+    filter: grayscale(0%);
+    transform: scale(1.2);
+}
+
+.icon_lilu
+{
+    width: 15%;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+    transition: transform 0.5s ease;
+    scale: 140%;
+}
+
+.icon_lilu:hover
+{
+    filter: grayscale(0%);
+    transform: scale(1.2);
+}
+
+.icon_cisa
+{
+    width: 15%;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+    transition: transform 0.5s ease;
+    scale: 125%;
+}
+
+.icon_cisa:hover
+{
+    filter: grayscale(0%);
+    transform: scale(1.2);
+}
+/* END OF ICONS */
+
+/* SCROLLBAR */
+html, body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+#education_section {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#education_section::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+/* MOBILE LAYOUT */
+
+   @media (max-width: 900px) {
+
+    html {
+        background: #ffffff;
+    }
+
+    body {
+      min-width: 0;
+      overflow-x: hidden;
+      justify-content: flex-start;
+      align-items: stretch;
+      background: transparent;
+      margin: 10px;
+      border-radius: 24px;
+      overflow: hidden;
+    }
+  
+    body::before{
+        inset: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 25% 100% !important;
+        z-index: -1;
+      }
+  
+    #education_section {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      width: 100%;
+      margin-left: 0;
+      height: 85vh;   /* fallback */
+      height: 85svh;  /* stable viewport height (bars visible) */
+      height: 85dvh;  /* dynamic viewport height (bars collapse/expand) */
+      padding: 0;
+      border-radius: 22px 22px 0 0;
+
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+
+      box-shadow: 0 -18px 40px rgba(0, 0, 0, 0.18);
+      box-sizing: border-box;
+
+      transform: translateY(var(--sheet-translate, 9999px));
+      transition: transform 260ms ease;
+      -webkit-overflow-scrolling: touch;
+
+      background: transparent;
+      overflow: hidden;
+    }
+
+    #education_section::before{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: #ffffff;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        z-index: 0;
+      }
+      
+      #education_section > *{
+        position: relative;
+        z-index: 1;
+      }
+
+      #education_section.no-anim {
+        transition: none !important;
+      }
+
+    #education_section.is-dragging {
+      transition: none;
+    }
+
+    .sheet-handle{
+        position: sticky;
+        top: 0;
+        z-index: 20;
+      
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      
+        background: transparent;
+        border-bottom: 1.3px solid rgba(0, 0, 0, 0.25);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+      
+        touch-action: none;
+      }
+
+      .sheet-handle::before {
+        content: "";
+        width: 64px;
+        height: 6px;
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.20);
+      }
+
+      .sheet-content{
+        padding: 10px 18px calc(env(safe-area-inset-bottom) + 90px);
+        height: calc(100% - 52px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+      
+        overscroll-behavior: contain;
+      }
+
+      .sheet-content::after{
+        content: "";
+        display: block;
+        height: 150px;
+      }
+
+      html{
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+      }
+  
+    h1 { font-size: 22px; }
+    h2 { font-size: 18px; letter-spacing: 1px; }
+    h3 { font-size: 16px; letter-spacing: 1px; }
+    p  { font-size: 15px; line-height: 1.65; }
+  
+    .icon, .icon_lilu, .icon_cisa {
+      width: 56px;
+      max-width: 20vw;
+    }
+  
+    .icon_lilu, .icon_cisa {
+      scale: 1;
+    }
+  
+    #education:hover .icon,
+    #education:active .icon,
+    #education:focus-within .icon,
+
+    #lilu1:hover .icon_lilu,
+    #lilu1:active .icon_lilu,
+    #lilu1:focus-within .icon_lilu,
+
+    #cisa:hover .icon_cisa,
+    #cisa:active .icon_cisa,
+    #cisa:focus-within .icon_cisa,
+
+    #usi:hover .icon,
+    #usi:active .icon,
+    #usi:focus-within .icon,
+
+    #la_sapienza:hover .icon,
+    #la_sapienza:active .icon,
+    #la_sapienza:focus-within .icon,
+
+    #home:hover .icon,
+    #home:active .icon,
+    #home:focus-within .icon {
+      filter: grayscale(0%);
+      transform: scale(1.2);
+    }
+
+    #education, #lilu1, #cisa, #usi, #la_sapienza, #home {
+      -webkit-tap-highlight-color: transparent;
+    }
+  
+    hr {
+      opacity: 0.35;
+    }
+  
+    #education_section { outline: 3px solid rgb(255, 181, 84); }
+  }

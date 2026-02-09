@@ -1,0 +1,343 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* GENERAL SETTINGS */
+body {
+    margin: 0;
+    min-height: 100vh;
+    min-width: 1400px;
+    overflow-x: auto;
+    position: relative;
+    background: transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+
+    background-image: url('../images/background_page_1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right top;
+}
+
+html, body {
+    height: 100%;
+}
+
+html
+{
+    height: 100%;
+}
+
+a:link
+{
+    text-decoration: none;
+}
+/* END OF GENERAL SETTINGS */
+
+/* LEFT SIDE OF THE PAGE */
+#menu
+{
+    width: 26%;
+    padding: 40px;
+    margin-right: auto;
+    text-align: center;
+    font-family: 'Roboto';
+    color: #444444;
+    background: rgba(255, 255, 255, 0.95);
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+#copyright
+{
+    font-size: x-small;
+}
+
+h3
+{
+    color: #333333;
+    transition: color 0.3s ease;
+}
+
+p
+{
+    color: #333333;
+    transition: color 0.3s ease;
+}
+
+/* MOUSE EVENT OF LEFT SIDE OF THE PAGE */
+#hello:hover h3
+{
+    color: orange;
+    transition: color 0.3s ease;
+}
+
+#hello:hover p
+{
+    color: orange;
+    transition: color 0.3s ease;
+}
+/* MOUSE EVENT OF LEFT SIDE OF THE PAGE */
+/* END OF LEFT SIDE OF THE PAGE */
+
+/* RIGHT SIDE OF THE PAGE */
+#education
+{
+    font-family: Bradley Hand, Comic Sans MS;
+    position: absolute;
+    right: 23%;
+    top: 55%;
+    transform: rotate(0deg);
+}
+
+#music
+{
+    font-family: Bradley Hand, Comic Sans MS;
+    position: absolute;
+    right: 32%;
+    top: 66%;
+    transform: rotate(-1.5deg);
+}
+
+#short_films
+{
+    font-family: Bradley Hand, Comic Sans MS;
+    position: absolute;
+    right: 5%;
+    top: 71%;
+    transform: rotate(1deg);
+}
+
+#jobs_stages
+{
+    font-family: Bradley Hand, Comic Sans MS;
+    position: absolute;
+    right: 10%;
+    top: 47%;
+    transform: rotate(1deg);
+}
+
+#contact
+{
+    font-family: Bradley Hand, Comic Sans MS;
+    position: absolute;
+    right: 13%;
+    top: 87%;
+    transform: rotate(0,5deg);
+}
+
+hr {
+    width: 100%;
+    border: 0;
+    border-top: 2px solid #333333;
+    margin: 30px 0;
+    align-self: stretch;
+}
+/* END OF RIGHT SIDE OF THE PAGE */
+
+/* LINKS */
+a:link
+{
+    color: #333333;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: #333333;
+    text-decoration: line-through;
+}
+
+a:visited
+{
+    color: #333333;
+}
+/* END OF LINKS */
+
+/* SCROLLBAR */
+html, body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+#menu {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#menu::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+/* MOBILE LAYOUT */
+
+@media (max-width: 900px) {
+  :root{
+    --bg-x-mobile: 55;
+    --bg-y-mobile: -80;
+  }
+
+  html{
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    background: #ffffff;
+  }
+
+  body {
+    min-width: 0;
+    overflow-x: hidden;
+    justify-content: flex-start;
+    align-items: stretch;
+    background: transparent;
+    margin: 10px;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+
+  body::before{
+    inset: 0;
+    background-image: url('../images/background_page_1.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: calc(var(--bg-x-mobile, 55) * 1%) calc(var(--bg-y-mobile, 0) * 1px);
+    z-index: -1;
+  }
+
+  #menu {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    margin-left: 0;
+    height: 85vh;
+    padding: 0;
+    border-radius: 22px 22px 0 0;
+
+    box-shadow: 0 -18px 40px rgba(0, 0, 0, 0.18);
+    box-sizing: border-box;
+
+    transform: translateY(var(--sheet-translate, 9999px));
+    transition: transform 260ms ease;
+    -webkit-overflow-scrolling: touch;
+
+    background: transparent;
+    overflow: hidden;
+    align-items: stretch;
+  }
+
+  #menu::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #ffffff;
+    z-index: 0;
+  }
+
+  #menu > *{
+    position: relative;
+    z-index: 1;
+  }
+
+  #menu.no-anim {
+    transition: none !important;
+  }
+
+  #menu.is-dragging {
+    transition: none;
+  }
+
+  .sheet-handle{
+    position: sticky;
+    top: 0;
+    z-index: 20;
+
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+
+    touch-action: none;
+    width: 100%;
+  }
+
+  .sheet-handle::before {
+    content: "";
+    width: 64px;
+    height: 6px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.20);
+  }
+
+  .sheet-content{
+    padding: 45px 18px env(safe-area-inset-bottom);
+    height: calc(100% - 52px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+
+  .sheet-content::after{
+    content: "";
+    display: block;
+    height: 150px;
+  }
+
+  h1 { font-size: 22px; }
+  h2 { font-size: 18px; letter-spacing: 1px; }
+  h3 { font-size: 16px; letter-spacing: 1px; }
+  p  { font-size: 15px; line-height: 1.65; }
+
+  hr {
+    opacity: 0.35;
+  }
+
+  #education, #music, #short_films, #jobs_stages, #contact,
+  #education a, #music a, #short_films a, #jobs_stages a, #contact a {
+    color: rgb(97, 96, 96) !important;
+  }
+
+  #education a:hover, #music a:hover, #short_films a:hover, #jobs_stages a:hover, #contact a:hover {
+    color: rgb(97, 96, 96) !important;
+    text-decoration: line-through;
+  }
+
+  #education a:visited, #music a:visited, #short_films a:visited, #jobs_stages a:visited, #contact a:visited {
+    color: rgb(97, 96, 96) !important;
+  }
+
+  #education{ right: 8%; top: 9%; }
+  #music{ right: 49%; top: 6%; }
+  #short_films{ right: 2%; top: 37%; }
+  #jobs_stages{ right: 17%; top: 21%; }
+  #contact{ right: 1%; top: 43%; }
+
+  #menu { outline: 3px solid rgb(255, 181, 84); }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <!-- HEADER -->
+    <head>
+        <title> 
+            Contact - Thomas Zaffalon
+        </title>
+        <meta name="author" content="Thomas Zaffalon">
+        <meta name="keywords" content="The Fallen Hot-Dogs, The McJoes, Thomas Zaffalon, Io Lui e l'Altro, CISA">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <base target="_blank">
+        <link rel="stylesheet" href="../css/zaffalon_page_5.css">
+    </head>
+    <!-- BODY -->
+    <body>
+        <div id="contact_section">
+            <div class="sheet-handle" aria-label="Drag handle"></div>
+            <div class="sheet-content">
+            <!-- CONTACT SECTION -->
+            <div id="contact">
+                <h1>
+                    Contact
+                </h1>
+                <p>
+                    If you'd like to get in touch, here are the ways to reach me.
+                </p>
+            </div>
+            <hr>
+            <!-- INFO SECTION -->
+            <p class="contact-icons"> 
+                <a href="mailto:tommy2k3@hispeed.ch?subject=Ciao!&body=Ciao%2C%0A%0ATi%20scrivo%20per...%0A">
+                    <img src="../images/email.png" alt="email" class="icon">
+                </a>
+                &nbsp;
+                <a href="https://wa.me/41762519171?text=Ciao,%20ti%20scrivo%20dal%20sito...">
+                    <img src="../images/whatsapp.png" alt="whatsapp" class="icon">
+                </a>
+                &nbsp;
+                <a href="https://www.instagram.com/tommy.zaffa/">
+                    <img src="../images/instagram.png" alt="instagram" class="icon">
+                </a>
+            </p>
+            <hr>
+            <!-- HOME SECTION -->
+            <div id="home">
+                <h3>
+                    GO HOME
+                </h3>    
+                <!-- ICON -->       
+                <a href="zaffalon_page_1.html" target="_self">
+                    <img src="../images/home.png" alt="home" class="icon">
+                </a>
+            </div>
+            </div>
+        </div>
+        <script src="../js/zaffalon_page_5.js" defer></script>
+        <script>
+          (function () {
+            const contact = document.getElementById('contact_section');
+            const home = document.getElementById('home');
+            const sections = [contact, home].filter(Boolean);
+
+            function clearAll() {
+              sections.forEach(s => s.classList.remove('tap-active'));
+            }
+
+            document.addEventListener('pointerdown', (e) => {
+
+              if (e.target.closest('#home')) {
+                sections.forEach(s => s.classList.toggle('tap-active', s === home));
+                return;
+              }
+
+              if (e.target.closest('.contact-icons')) {
+                sections.forEach(s => s.classList.toggle('tap-active', s === contact));
+                return;
+              }
+
+              clearAll();
+            }, { passive: true });
+
+            const sheetContent = document.querySelector('.sheet-content');
+            if (sheetContent) {
+              sheetContent.addEventListener('scroll', clearAll, { passive: true });
+            }
+          })();
+        </script>
+    </body>
+</html>
