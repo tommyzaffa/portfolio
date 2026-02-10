@@ -1,6 +1,15 @@
 /* FONT & ROOT */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
+/* Local font used for the handwritten menu items (put the font file in /fonts/) */
+@font-face {
+  font-family: 'Starboard DEMO';
+  src: url('/fonts/Starboard%20DEMO.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root{
   --bg-x-desktop: 50;
   --bg-y-desktop: 0;
@@ -11,6 +20,36 @@
   --bg-x-mobile: 55;
   --bg-y-mobile: 200;
   --bg-y-mobile-px: -80;
+
+  --edu-right: 23%;
+  --edu-top: 55%;
+  --edu-rot: 0deg;
+  --edu-scale: 1;
+  --edu-svg-width: 130px;
+
+  --music-right: 29%;
+  --music-top: 64%;
+  --music-rot: -1.5deg;
+  --music-scale: 1;
+  --music-svg-width: 130px;
+
+  --shortfilms-right: 5%;
+  --shortfilms-top: 71%;
+  --shortfilms-rot: 1deg;
+  --shortfilms-scale: 1;
+  --shortfilms-svg-width: 140px;
+
+  --jobs-right: 11%;
+  --jobs-top: 48%;
+  --jobs-rot: 1deg;
+  --jobs-scale: 1;
+  --jobs-svg-width: 130px;
+
+  --contact-right: 7%;
+  --contact-top: 87%;
+  --contact-rot: 0.5deg;
+  --contact-scale: 1;
+  --contact-svg-width: 180px;
 }
 
 /* GENERAL SETTINGS */
@@ -110,48 +149,60 @@ p
 /* RIGHT SIDE OF THE PAGE */
 #education
 {
-    font-family: Bradley Hand, Comic Sans MS;
+    font-family: 'Starboard DEMO', Bradley Hand, 'Comic Sans MS', cursive;
     position: absolute;
-    right: 23%;
-    top: 55%;
-    transform: rotate(0deg);
+    right: var(--edu-right);
+    top: var(--edu-top);
+    transform: rotate(var(--edu-rot)) scale(var(--edu-scale));
+    transform-origin: top right;
 }
 
 #music
 {
-    font-family: Bradley Hand, Comic Sans MS;
+    font-family: 'Starboard DEMO', Bradley Hand, 'Comic Sans MS', cursive;
     position: absolute;
-    right: 32%;
-    top: 66%;
-    transform: rotate(-1.5deg);
+    right: var(--music-right);
+    top: var(--music-top);
+    transform: rotate(var(--music-rot)) scale(var(--music-scale));
+    transform-origin: top right;
 }
 
 #short_films
 {
-    font-family: Bradley Hand, Comic Sans MS;
+    font-family: 'Starboard DEMO', Bradley Hand, 'Comic Sans MS', cursive;
     position: absolute;
-    right: 5%;
-    top: 71%;
-    transform: rotate(1deg);
+    right: var(--shortfilms-right);
+    top: var(--shortfilms-top);
+    transform: rotate(var(--shortfilms-rot)) scale(var(--shortfilms-scale));
+    transform-origin: top right;
 }
 
 #jobs_stages
 {
-    font-family: Bradley Hand, Comic Sans MS;
+    font-family: 'Starboard DEMO', Bradley Hand, 'Comic Sans MS', cursive;
     position: absolute;
-    right: 10%;
-    top: 47%;
-    transform: rotate(1deg);
+    right: var(--jobs-right);
+    top: var(--jobs-top);
+    transform: rotate(var(--jobs-rot)) scale(var(--jobs-scale));
+    transform-origin: top right;
 }
 
 #contact
 {
-    font-family: Bradley Hand, Comic Sans MS;
+    font-family: 'Starboard DEMO', Bradley Hand, 'Comic Sans MS', cursive;
     position: absolute;
-    right: 13%;
-    top: 87%;
-    transform: rotate(0,5deg);
+    right: var(--contact-right);
+    top: var(--contact-top);
+    transform: rotate(var(--contact-rot)) scale(var(--contact-scale));
+    transform-origin: top right;
 }
+
+/* SVG label sizing (width controls size; height auto) */
+#education .write-svg { width: var(--edu-svg-width); height: auto; }
+#music .write-svg { width: var(--music-svg-width); height: auto; }
+#short_films .write-svg { width: var(--shortfilms-svg-width); height: auto; }
+#jobs_stages .write-svg { width: var(--jobs-svg-width); height: auto; }
+#contact .write-svg { width: var(--contact-svg-width); height: auto; }
 
 hr {
     width: 100%;
@@ -222,31 +273,6 @@ body::-webkit-scrollbar {
 
     --contact-right: 20%;
     --contact-top: 48%;
-  }
-
-  #education{
-    right: var(--edu-right) !important;
-    top: var(--edu-top) !important;
-  }
-
-  #music{
-    right: var(--music-right) !important;
-    top: var(--music-top) !important;
-  }
-
-  #short_films{
-    right: var(--shortfilms-right) !important;
-    top: var(--shortfilms-top) !important;
-  }
-
-  #jobs_stages{
-    right: var(--jobs-right) !important;
-    top: var(--jobs-top) !important;
-  }
-
-  #contact{
-    right: var(--contact-right) !important;
-    top: var(--contact-top) !important;
   }
 }
 /* END IPAD PORTRAIT LAYOUT */
@@ -321,6 +347,26 @@ body::-webkit-scrollbar {
 /* MOBILE LAYOUT */
 @media (max-width: 1024px) and (orientation: portrait) and (hover: none) and (pointer: coarse) {
   :root{
+    --edu-right: 8%;
+    --edu-top: 8.5%;
+
+    --music-right: 52%;
+    --music-top: 6%;
+
+    --shortfilms-right: 2%;
+    --shortfilms-top: 38%;
+
+    --jobs-right: 19%;
+    --jobs-top: 20%;
+
+    --contact-right: 8%;
+    --contact-top: 43%;
+
+    --edu-scale: 0.9;
+    --music-scale: 0.4;
+    --shortfilms-scale: 0.6;
+    --jobs-scale: 0.7;
+    --contact-scale: 0.5;
   }
 
   html{
@@ -458,12 +504,57 @@ body::-webkit-scrollbar {
     color: rgb(97, 96, 96) !important;
   }
 
-  #education{ right: 8%; top: 9%; }
-  #music{ right: 49%; top: 6%; }
-  #short_films{ right: 2%; top: 37%; }
-  #jobs_stages{ right: 17%; top: 21%; }
-  #contact{ right: 1%; top: 43%; }
-
   #menu { outline: 3px solid rgb(255, 181, 84); }
 }
 /* END OF MOBILE LAYOUT */
+
+/* SVG ANIMATION */
+
+.write-svg {
+  display: block;
+  overflow: visible;
+}
+
+.write-path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  stroke-dasharray: 9999;
+  stroke-dashoffset: 9999;
+
+  animation: write-stroke 1.3s ease forwards;
+}
+
+.write-svg .write-path:nth-child(1) { animation-delay: 0ms; }
+.write-svg .write-path:nth-child(2) { animation-delay: 120ms; }
+.write-svg .write-path:nth-child(3) { animation-delay: 260ms; }
+.write-svg .write-path:nth-child(4) { animation-delay: 340ms; }
+.write-svg .write-path:nth-child(5) { animation-delay: 420ms; }
+
+@keyframes write-stroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .write-path {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+}
+
+.write-path{
+  fill: none !important;
+  stroke: currentColor;
+  stroke-width: 25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.write-svg path{
+  fill-opacity: 0;
+}
