@@ -20,7 +20,7 @@ body::before {
     inset: 0;
     z-index: -1;
 
-    background-image: url('../images/background_page_2.png');
+    background-image: url('../images/zaffalon_page_2.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left top;
@@ -306,9 +306,9 @@ body::-webkit-scrollbar {
 
       width: 100%;
       margin-left: 0;
-      height: 85vh;   /* fallback */
-      height: 85svh;  /* stable viewport height (bars visible) */
-      height: 85dvh;  /* dynamic viewport height (bars collapse/expand) */
+      height: 85vh;
+      height: 85svh;
+      height: 85dvh;
       padding: 0;
       border-radius: 22px 22px 0 0;
 
