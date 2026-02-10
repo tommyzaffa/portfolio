@@ -41,6 +41,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const wordSpanMs = (paths.length - 1) * PATH_STAGGER_MS;
+    const wordEndMs = timelineMs + DURATION_MS + wordSpanMs;
+    
+    setTimeout(() => {
+      svg.classList.add("is-filled");
+    }, wordEndMs);
+
     timelineMs += DURATION_MS + wordSpanMs + WORD_GAP_MS;
   });
 });
