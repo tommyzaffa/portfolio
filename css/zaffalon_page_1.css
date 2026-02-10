@@ -32,7 +32,7 @@ body::before {
     inset: 0;
     z-index: -1;
 
-    background-image: url('../images/zaffalon_page_1.webp');
+    background-image: url('/images/zaffalon_page_1.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right top;
@@ -342,7 +342,7 @@ body::-webkit-scrollbar {
 
   body::before{
     inset: 0;
-    background-image: url('../images/background_page_1.jpeg');
+    background-image: url('/images/zaffalon_page_1.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right top;
