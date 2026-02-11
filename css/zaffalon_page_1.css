@@ -367,7 +367,7 @@ body::-webkit-scrollbar {
 /* END IPAD LANDSCAPE LAYOUT */
 
 /* MOBILE LAYOUT */
-@media (max-width: 1024px) and (orientation: portrait) and (hover: none) and (pointer: coarse) {
+@media (max-width: 1024px) and (orientation: portrait) {
   :root{
     --edu-right: 8%;
     --edu-top: 8.5%;
