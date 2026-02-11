@@ -259,6 +259,7 @@ body::-webkit-scrollbar {
 /* IPAD PORTRAIT LAYOUT (VERTICAL) */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   :root{
+    /* Position */
     --edu-right: 17%;
     --edu-top: 15%;
 
@@ -273,6 +274,27 @@ body::-webkit-scrollbar {
 
     --contact-right: 20%;
     --contact-top: 48%;
+
+    /* Rotation */
+    --edu-rot: 0deg;
+    --music-rot: -1.5deg;
+    --shortfilms-rot: 1deg;
+    --jobs-rot: 1deg;
+    --contact-rot: 0.5deg;
+
+    /* Scale */
+    --edu-scale: 1;
+    --music-scale: 1;
+    --shortfilms-scale: 1;
+    --jobs-scale: 1;
+    --contact-scale: 1;
+
+    /* SVG size */
+    --edu-svg-width: 130px;
+    --music-svg-width: 130px;
+    --shortfilms-svg-width: 140px;
+    --jobs-svg-width: 130px;
+    --contact-svg-width: 180px;
   }
 }
 /* END IPAD PORTRAIT LAYOUT */
