@@ -260,6 +260,11 @@ body::-webkit-scrollbar {
 
 /* IPAD PORTRAIT LAYOUT (VERTICAL) */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  body{
+    min-height: 100dvh;
+    height: 100dvh;
+  }
+  
   :root{
     --edu-right: 32%;
     --edu-top: 10%;
