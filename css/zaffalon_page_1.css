@@ -264,22 +264,22 @@ body::-webkit-scrollbar {
     min-height: 100dvh;
     height: 100dvh;
   }
-  
+
   :root{
     --edu-right: 32%;
-    --edu-top: 10%;
+    --edu-top: 25%;
 
     --music-right: 61.5%;
-    --music-top: 7%;
+    --music-top: 22%;
 
     --shortfilms-right: 1%;
-    --shortfilms-top: 31%;
+    --shortfilms-top: 46%;
 
     --jobs-right: 40%;
-    --jobs-top: 21%;
+    --jobs-top: 36%;
 
     --contact-right: 26%;
-    --contact-top: 41%;
+    --contact-top: 56%;
 
     --edu-rot: 0deg;
     --music-rot: -1.5deg;
