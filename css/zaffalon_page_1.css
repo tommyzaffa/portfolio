@@ -1,7 +1,6 @@
 /* FONT & ROOT */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-/* Local font used for the handwritten menu items (put the font file in /fonts/) */
 @font-face {
   font-family: 'Starboard DEMO';
   src: url('/fonts/Starboard%20DEMO.otf') format('opentype');
@@ -50,6 +49,10 @@
   --contact-rot: 0.5deg;
   --contact-scale: 1;
   --contact-svg-width: 180px;
+
+  --bg-x-ipad-portrait: 70;
+  --bg-y-ipad-portrait: 200;
+  --bg-y-ipad-portrait-px: -100;
 }
 
 /* GENERAL SETTINGS */
@@ -197,7 +200,6 @@ p
     transform-origin: top right;
 }
 
-/* SVG label sizing (width controls size; height auto) */
 #education .write-svg { width: var(--edu-svg-width); height: auto; }
 #music .write-svg { width: var(--music-svg-width); height: auto; }
 #short_films .write-svg { width: var(--shortfilms-svg-width); height: auto; }
@@ -259,42 +261,174 @@ body::-webkit-scrollbar {
 /* IPAD PORTRAIT LAYOUT (VERTICAL) */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   :root{
-    /* Position */
-    --edu-right: 17%;
-    --edu-top: 15%;
+    --edu-right: 32%;
+    --edu-top: 10%;
 
-    --music-right: 50%;
-    --music-top: 12%;
+    --music-right: 61.5%;
+    --music-top: 7%;
 
-    --shortfilms-right: 5%;
-    --shortfilms-top: 40%;
+    --shortfilms-right: 1%;
+    --shortfilms-top: 31%;
 
-    --jobs-right: 25%;
-    --jobs-top: 28%;
+    --jobs-right: 40%;
+    --jobs-top: 21%;
 
-    --contact-right: 20%;
-    --contact-top: 48%;
+    --contact-right: 26%;
+    --contact-top: 41%;
 
-    /* Rotation */
     --edu-rot: 0deg;
     --music-rot: -1.5deg;
     --shortfilms-rot: 1deg;
     --jobs-rot: 1deg;
     --contact-rot: 0.5deg;
 
-    /* Scale */
     --edu-scale: 1;
-    --music-scale: 1;
-    --shortfilms-scale: 1;
+    --music-scale: 0.8;
+    --shortfilms-scale: 1.2;
     --jobs-scale: 1;
     --contact-scale: 1;
 
-    /* SVG size */
     --edu-svg-width: 130px;
     --music-svg-width: 130px;
     --shortfilms-svg-width: 140px;
     --jobs-svg-width: 130px;
     --contact-svg-width: 180px;
+  }
+
+  html{
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    background: #ffffff;
+  }
+
+  body {
+    min-width: 0;
+    overflow-x: hidden;
+    justify-content: flex-start;
+    align-items: stretch;
+    background: transparent;
+    margin: 10px;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+
+  body::before{
+    inset: 0;
+    z-index: -1;
+  }
+
+  #menu {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    margin-left: 0;
+    height: 85vh;
+    padding: 0;
+    border-radius: 22px 22px 0 0;
+
+    box-shadow: 0 -18px 40px rgba(0, 0, 0, 0.18);
+    box-sizing: border-box;
+
+    transform: translateY(var(--sheet-translate, 9999px));
+    transition: transform 260ms ease;
+    -webkit-overflow-scrolling: touch;
+
+    background: transparent;
+    overflow: hidden;
+    align-items: stretch;
+  }
+
+  #menu::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #ffffff;
+    z-index: 0;
+  }
+
+  #menu > *{
+    position: relative;
+    z-index: 1;
+  }
+
+  #menu.no-anim {
+    transition: none !important;
+  }
+
+  #menu.is-dragging {
+    transition: none;
+  }
+
+  .sheet-handle{
+    position: sticky;
+    top: 0;
+    z-index: 20;
+
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+
+    touch-action: none;
+    width: 100%;
+  }
+
+  .sheet-handle::before {
+    content: "";
+    width: 64px;
+    height: 6px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.20);
+  }
+
+  .sheet-content{
+    padding: 45px 18px env(safe-area-inset-bottom);
+    height: calc(100% - 52px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+
+  .sheet-content::after{
+    content: "";
+    display: block;
+    height: 150px;
+  }
+
+  h1 { font-size: 22px; }
+  h2 { font-size: 18px; letter-spacing: 1px; }
+  h3 { font-size: 16px; letter-spacing: 1px; }
+  p  { font-size: 15px; line-height: 1.65; }
+
+  hr {
+    opacity: 0.35;
+  }
+
+  #education, #music, #short_films, #jobs_stages, #contact,
+  #education a, #music a, #short_films a, #jobs_stages a, #contact a {
+    color: rgb(97, 96, 96) !important;
+  }
+
+  #education a:hover, #music a:hover, #short_films a:hover, #jobs_stages a:hover, #contact a:hover {
+    color: rgb(97, 96, 96) !important;
+    text-decoration: line-through;
+  }
+
+  #education a:visited, #music a:visited, #short_films a:visited, #jobs_stages a:visited, #contact a:visited {
+    color: rgb(97, 96, 96) !important;
+  }
+
+  #menu { outline: 3px solid rgb(255, 181, 84); }
+
+  body::before{
+    background-position-x: calc(var(--bg-x-ipad-portrait, 50) * 1%);
+    background-position-y: calc(var(--bg-y-ipad-portrait, 0) * 1% + (var(--bg-y-ipad-portrait-px, 0) * 1px));
   }
 }
 /* END IPAD PORTRAIT LAYOUT */
@@ -367,7 +501,7 @@ body::-webkit-scrollbar {
 /* END IPAD LANDSCAPE LAYOUT */
 
 /* MOBILE LAYOUT */
-@media (max-width: 1024px) and (orientation: portrait) {
+@media (max-width: 767px) and (orientation: portrait) {
   :root{
     --edu-right: 8%;
     --edu-top: 8.5%;
