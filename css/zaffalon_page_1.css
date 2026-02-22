@@ -263,19 +263,19 @@ body::-webkit-scrollbar {
 
   :root{
     --edu-right: 32%;
-    --edu-top: 25%;
+    --edu-top: 11%;
 
     --music-right: 61.5%;
-    --music-top: 22%;
+    --music-top: 8%;
 
     --shortfilms-right: 1%;
-    --shortfilms-top: 46%;
+    --shortfilms-top: 32%;
 
     --jobs-right: 40%;
-    --jobs-top: 36%;
+    --jobs-top: 22%;
 
     --contact-right: 26%;
-    --contact-top: 56%;
+    --contact-top: 42%;
 
     --edu-rot: 0deg;
     --music-rot: -1.5deg;
