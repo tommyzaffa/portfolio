@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const WORD_GAP_MS = 0;
   const PATH_STAGGER_MS = 50;
-  const DURATION_MS = 1100;
-  const START_DELAY_MS = 800;
+  const DURATION_MS = 400;
+  const START_DELAY_MS = 300;
 
   let timelineMs = START_DELAY_MS;
 
