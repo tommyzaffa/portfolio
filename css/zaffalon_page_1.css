@@ -692,7 +692,7 @@ body::-webkit-scrollbar {
 @media (prefers-reduced-motion: reduce) {
   .write-path {
     animation: none !important;
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 1000;
     fill: orange;
   }
 }
