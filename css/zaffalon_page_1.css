@@ -689,14 +689,6 @@ body::-webkit-scrollbar {
   to { stroke-dashoffset: 0; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .write-path {
-    animation: none !important;
-    stroke-dashoffset: 1000;
-    fill: orange;
-  }
-}
-
 .write-path{
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
