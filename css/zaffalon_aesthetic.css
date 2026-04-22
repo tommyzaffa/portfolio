@@ -1,0 +1,242 @@
+/* =========================================================
+   SHARED AESTHETIC LAYER
+   Loaded AFTER each page CSS. Adds paper look, hand-drawn
+   separators, washi tape, handwritten titles and mobile polish.
+   ========================================================= */
+
+:root{
+  --paper-bg: #fbf7ef;
+  --paper-ink: #333333;
+  --paper-accent: #f9b35a;
+  --paper-accent-soft: rgba(249, 179, 90, 0.28);
+  --paper-shadow: rgba(90, 60, 20, 0.08);
+}
+
+/* ---------- PAPER PANEL (desktop + fallback) ---------- */
+#menu,
+#education_section,
+#music_section,
+#short_films_section,
+#contact_section,
+#jobs_section,
+#apps_section{
+  background:
+    /* subtle paper grain */
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.45  0 0 0 0 0.35  0 0 0 0 0.22  0 0 0 0.08 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>"),
+    /* faint warm vignette */
+    radial-gradient(ellipse at 50% 0%, rgba(249, 179, 90, 0.06), transparent 60%),
+    radial-gradient(ellipse at 50% 100%, rgba(90, 60, 20, 0.05), transparent 55%),
+    var(--paper-bg) !important;
+  background-blend-mode: multiply, normal, normal, normal;
+  box-shadow:
+    inset 0 0 80px rgba(90, 60, 20, 0.06),
+    inset 0 0 0 1px rgba(90, 60, 20, 0.04);
+}
+
+/* On mobile the panels use a ::before for the actual surface.
+   Paint the paper look there instead so the outer frame stays
+   transparent (needed for the bottom-sheet animation). */
+@media (max-width: 900px), (max-width: 767px) and (orientation: portrait),
+       (min-width: 768px) and (max-width: 1024px) and (orientation: portrait){
+  #menu,
+  #education_section,
+  #music_section,
+  #short_films_section,
+  #contact_section,
+  #jobs_section,
+  #apps_section{
+    background: transparent !important;
+    box-shadow: 0 -18px 40px rgba(0, 0, 0, 0.18);
+  }
+
+  #menu::before,
+  #education_section::before,
+  #music_section::before,
+  #short_films_section::before,
+  #contact_section::before,
+  #jobs_section::before,
+  #apps_section::before{
+    background:
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.45  0 0 0 0 0.35  0 0 0 0 0.22  0 0 0 0.09 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>"),
+      radial-gradient(ellipse at 50% 0%, rgba(249, 179, 90, 0.08), transparent 55%),
+      var(--paper-bg) !important;
+    background-blend-mode: multiply, normal, normal;
+  }
+
+  /* Dashed orange outline instead of solid, feels more hand-drawn */
+  #menu,
+  #education_section,
+  #music_section,
+  #short_films_section,
+  #contact_section,
+  #jobs_section,
+  #apps_section{
+    outline: 3px dashed rgb(255, 181, 84) !important;
+    outline-offset: -3px;
+  }
+
+  /* Doodle that peeks above the drag handle */
+  .sheet-handle{
+    position: relative;
+  }
+  .sheet-handle::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -14px;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 18px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 18' fill='none' stroke='%23f9b35a' stroke-width='2' stroke-linecap='round'><path d='M4 10 Q 14 2, 24 10 T 44 10 T 64 10 T 84 10 T 104 10 T 124 10 T 138 10'/></svg>");
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+    opacity: 0.9;
+  }
+
+  /* Larger, warmer handle bar */
+  .sheet-handle::before{
+    background: rgba(90, 60, 20, 0.25) !important;
+  }
+}
+
+/* ---------- HAND-DRAWN HR (wavy ink line) ---------- */
+hr{
+  border: 0 !important;
+  border-top: 0 !important;
+  height: 18px !important;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 18' fill='none' stroke='%23333333' stroke-width='1.6' stroke-linecap='round'><path d='M4 9 C 20 2, 40 16, 60 9 S 100 2, 120 9 S 160 16, 180 9 S 220 2, 240 9 S 280 16, 296 9'/></svg>") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 85% 100% !important;
+  opacity: 0.55 !important;
+  margin: 26px 0 !important;
+}
+
+/* ---------- HANDWRITTEN SECTION TITLES ---------- */
+/* Section h1 (MUSIC, EDUCATION, SHORT FILMS, ...) get the Starboard
+   handwritten font that is already used on the home links. */
+#music > h1,
+#education > h1,
+#short_films > h1,
+#contact > h1,
+#jobs > h1,
+#apps > h1{
+  font-family: 'Starboard DEMO', 'Bradley Hand', 'Comic Sans MS', cursive !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  font-size: 2.4em !important;
+  letter-spacing: 1px !important;
+  color: var(--paper-ink) !important;
+  position: relative;
+  display: inline-block;
+  padding: 4px 14px 6px !important;
+}
+
+/* Faint highlighter swipe behind the main section title */
+#music > h1::before,
+#education > h1::before,
+#short_films > h1::before,
+#contact > h1::before,
+#jobs > h1::before,
+#apps > h1::before{
+  content: "";
+  position: absolute;
+  left: 2px; right: 2px;
+  bottom: 8px;
+  height: 55%;
+  background: var(--paper-accent-soft);
+  transform: rotate(-1deg);
+  z-index: -1;
+  border-radius: 3px 8px 4px 10px;
+}
+
+/* Make sure the highlighter sits behind the text */
+#music > h1,
+#education > h1,
+#short_films > h1,
+#contact > h1,
+#jobs > h1,
+#apps > h1{ isolation: isolate; }
+
+/* ---------- WASHI TAPE for sub-section titles ---------- */
+/* Applies to band / school / project titles: a subtle pastel strip
+   rotated slightly, giving the "taped note" vibe. */
+#mcjoes > h2,
+#zaffa > h2,
+#hot-dogs > h2,
+#spiked_flower > h2,
+#lilu1 > h2,
+#cisa > h2,
+#usi > h2,
+#la_sapienza > h2{
+  position: relative;
+  display: inline-block;
+  padding: 6px 18px !important;
+  isolation: isolate;
+}
+
+#mcjoes > h2::before{ background: rgba(249, 179, 90, 0.35); }
+#zaffa  > h2::before{ background: rgba(180, 210, 170, 0.45); }
+#hot-dogs > h2::before{ background: rgba(230, 150, 150, 0.35); }
+#spiked_flower > h2::before{ background: rgba(170, 190, 220, 0.45); }
+#lilu1 > h2::before{ background: rgba(249, 179, 90, 0.35); }
+#cisa  > h2::before{ background: rgba(180, 210, 170, 0.45); }
+#usi   > h2::before{ background: rgba(230, 150, 150, 0.35); }
+#la_sapienza > h2::before{ background: rgba(170, 190, 220, 0.45); }
+
+#mcjoes > h2::before,
+#zaffa > h2::before,
+#hot-dogs > h2::before,
+#spiked_flower > h2::before,
+#lilu1 > h2::before,
+#cisa > h2::before,
+#usi > h2::before,
+#la_sapienza > h2::before{
+  content: "";
+  position: absolute;
+  inset: 2px -6px 4px -6px;
+  transform: rotate(-1.2deg);
+  z-index: -1;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 rgba(90, 60, 20, 0.06);
+}
+
+/* Alternate the rotation direction for a more organic feel */
+#zaffa > h2::before,
+#spiked_flower > h2::before,
+#cisa > h2::before,
+#la_sapienza > h2::before{
+  transform: rotate(1.4deg);
+}
+
+/* ---------- WARMER TEXT TONE ON PAPER ---------- */
+#menu h2,
+#menu h3,
+#menu p,
+#education_section h2,
+#education_section h3,
+#education_section p,
+#music_section h2,
+#music_section h3,
+#music_section p,
+#short_films_section h2,
+#short_films_section h3,
+#short_films_section p,
+#contact_section h2,
+#contact_section h3,
+#contact_section p,
+#jobs_section h2,
+#jobs_section h3,
+#jobs_section p,
+#apps_section h2,
+#apps_section h3,
+#apps_section p{
+  color: #3a2e24;
+}
+
+/* ---------- FOOTNOTE ON HOME ---------- */
+#copyright{
+  font-style: italic;
+  opacity: 0.75;
+}
