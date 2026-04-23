@@ -283,37 +283,28 @@ hr:nth-of-type(3n){
 }
 
 /* =========================================================
-   5. EDUCATION ICONS - round badge with soft orange ring
+   5. EDUCATION ICONS - square images clipped to circle, no frills.
+   Match the other pages: grayscale -> color + slight zoom on hover.
    ========================================================= */
 #lilu1 .icon_lilu,
 #cisa .icon_cisa,
 #usi .icon,
 #la_sapienza .icon{
-  width: 78px !important;
-  height: 78px !important;
-  max-width: 78px !important;
+  aspect-ratio: 1 / 1 !important;
   border-radius: 50% !important;
-  background: #ffffff !important;
-  padding: 10px !important;
-  box-sizing: border-box !important;
-  object-fit: contain !important;
+  object-fit: cover !important;
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
   scale: 1 !important;
-  box-shadow:
-    0 3px 8px rgba(90, 60, 20, 0.18),
-    0 0 0 2px rgba(249, 179, 90, 0.55),
-    0 0 0 6px rgba(249, 179, 90, 0.15) !important;
-  transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease !important;
 }
 
 #lilu1 .icon_lilu:hover,
 #cisa .icon_cisa:hover,
 #usi .icon:hover,
 #la_sapienza .icon:hover{
-  transform: rotate(-4deg) scale(1.08) !important;
-  box-shadow:
-    0 6px 14px rgba(90, 60, 20, 0.25),
-    0 0 0 2px rgba(249, 179, 90, 0.85),
-    0 0 0 8px rgba(249, 179, 90, 0.22) !important;
+  transform: scale(1.2) !important;
+  box-shadow: none !important;
   filter: grayscale(0%) !important;
 }
 
