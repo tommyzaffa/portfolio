@@ -224,7 +224,7 @@ body::-webkit-scrollbar {
         inset: 0;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: 20% calc(100% - 70px) !important;
+        background-position: 20% calc(100% - 27px) !important;
         z-index: -1;
       }
 

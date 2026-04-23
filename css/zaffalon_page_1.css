@@ -529,22 +529,22 @@ body::-webkit-scrollbar {
 @media (max-width: 767px) and (orientation: portrait) {
   :root{
     --edu-right: 2%;
-    --edu-top: 3.5%;
+    --edu-top: 5.5%;
 
     --music-right: 52%;
-    --music-top: 6%;
+    --music-top: 8%;
 
     --shortfilms-right: 2%;
-    --shortfilms-top: 38%;
+    --shortfilms-top: 40%;
 
     --jobs-right: 19%;
-    --jobs-top: 20%;
+    --jobs-top: 22%;
 
     --contact-right: 8%;
-    --contact-top: 43%;
+    --contact-top: 45%;
 
     --apps-right: 24%;
-    --apps-top: 7%;
+    --apps-top: 9%;
 
     --edu-scale: 0.6;
     --music-scale: 0.4;

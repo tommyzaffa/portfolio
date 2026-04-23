@@ -294,8 +294,9 @@ body::-webkit-scrollbar {
         inset: 0;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: 25% 100% !important;
+        background-position: 25% calc(100% + 35px) !important;
         z-index: -1;
+        scale: 110%;
       }
   
     #education_section {
