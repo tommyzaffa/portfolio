@@ -122,8 +122,8 @@ hr{
 #education > h1,
 #short_films > h1,
 #contact > h1,
-#jobs > h1,
-#apps > h1{
+#jobs_stages > h1,
+#apps_sites > h1{
   font-family: 'Starboard DEMO', 'Bradley Hand', 'Comic Sans MS', cursive !important;
   text-transform: none !important;
   text-decoration: none !important;
@@ -140,8 +140,8 @@ hr{
 #education > h1::before,
 #short_films > h1::before,
 #contact > h1::before,
-#jobs > h1::before,
-#apps > h1::before{
+#jobs_stages > h1::before,
+#apps_sites > h1::before{
   content: "";
   position: absolute;
   left: 4px; right: 4px;
@@ -158,8 +158,8 @@ hr{
 #education > h1::after,
 #short_films > h1::after,
 #contact > h1::after,
-#jobs > h1::after,
-#apps > h1::after{
+#jobs_stages > h1::after,
+#apps_sites > h1::after{
   content: "";
   position: absolute;
   right: -18px;
@@ -183,7 +183,16 @@ hr{
 #lilu1 > h2,
 #cisa > h2,
 #usi > h2,
-#la_sapienza > h2{
+#la_sapienza > h2,
+#io_lui_e_l_altro > h2,
+#mini_cuchi > h2,
+#etnic > h2,
+#jazzascona > h2,
+#lff > h2,
+#spring > h2,
+#weathaff > h2,
+#turntale > h2,
+#merge_film_festival > h2{
   position: relative;
   display: inline-block;
   padding: 8px 22px !important;
@@ -198,7 +207,16 @@ hr{
 #lilu1 > h2::before,
 #cisa > h2::before,
 #usi > h2::before,
-#la_sapienza > h2::before{
+#la_sapienza > h2::before,
+#io_lui_e_l_altro > h2::before,
+#mini_cuchi > h2::before,
+#etnic > h2::before,
+#jazzascona > h2::before,
+#lff > h2::before,
+#spring > h2::before,
+#weathaff > h2::before,
+#turntale > h2::before,
+#merge_film_festival > h2::before{
   content: "";
   position: absolute;
   inset: 0 -8px;
@@ -240,6 +258,48 @@ hr{
 #la_sapienza > h2::before{
   background: repeating-linear-gradient(45deg, rgba(156, 178, 212, 0.60) 0 8px, rgba(156, 178, 212, 0.40) 8px 16px);
   transform: rotate(1.5deg);
+}
+
+/* shortfilms */
+#io_lui_e_l_altro > h2::before{
+  background: repeating-linear-gradient(45deg, rgba(249, 179, 90, 0.55) 0 8px, rgba(249, 179, 90, 0.35) 8px 16px);
+  transform: rotate(-1.5deg);
+}
+
+/* jobs-stages */
+#mini_cuchi > h2::before{
+  background: repeating-linear-gradient(45deg, rgba(168, 202, 156, 0.60) 0 8px, rgba(168, 202, 156, 0.40) 8px 16px);
+  transform: rotate(1.8deg);
+}
+#etnic > h2::before{
+  background: repeating-linear-gradient(45deg, rgba(221, 136, 136, 0.55) 0 8px, rgba(221, 136, 136, 0.38) 8px 16px);
+  transform: rotate(-1.2deg);
+}
+#jazzascona > h2::before{
+  background: repeating-linear-gradient(45deg, rgba(156, 178, 212, 0.60) 0 8px, rgba(156, 178, 212, 0.40) 8px 16px);
+  transform: rotate(1.5deg);
+}
+#lff > h2::before{
+  background: repeating-linear-gradient(45deg, rgba(249, 179, 90, 0.55) 0 8px, rgba(249, 179, 90, 0.35) 8px 16px);
+  transform: rotate(-1.5deg);
+}
+#spring > h2::before{
+  background: repeating-linear-gradient(45deg, rgba(168, 202, 156, 0.60) 0 8px, rgba(168, 202, 156, 0.40) 8px 16px);
+  transform: rotate(1.8deg);
+}
+
+/* apps */
+#weathaff > h2::before{
+  background: repeating-linear-gradient(45deg, rgba(221, 136, 136, 0.55) 0 8px, rgba(221, 136, 136, 0.38) 8px 16px);
+  transform: rotate(-1.2deg);
+}
+#turntale > h2::before{
+  background: repeating-linear-gradient(45deg, rgba(156, 178, 212, 0.60) 0 8px, rgba(156, 178, 212, 0.40) 8px 16px);
+  transform: rotate(1.5deg);
+}
+#merge_film_festival > h2::before{
+  background: repeating-linear-gradient(45deg, rgba(249, 179, 90, 0.55) 0 8px, rgba(249, 179, 90, 0.35) 8px 16px);
+  transform: rotate(-1.5deg);
 }
 
 /* =========================================================
