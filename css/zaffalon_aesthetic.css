@@ -91,14 +91,6 @@
     margin: 0 !important;
     border-radius: 0 !important;
   }
-
-  /* Keep the page bg attached and fixed while the sheet content scrolls,
-     same behavior as desktop. Helps iOS Safari stop jittering. */
-  body::before{
-    background-attachment: fixed !important;
-    position: fixed !important;
-    will-change: transform;
-  }
 }
 
 /* =========================================================
@@ -408,4 +400,17 @@ hr{
 #hello:hover h3,
 #hello:hover p{
   color: #d99040 !important;
+}
+
+/* =========================================================
+   10. APPS ICONS - force block so they center on a new line
+   (the <span class="badge"> after the h2 breaks inline-flow
+   in a way that pushes the icon sideways on some viewports)
+   ========================================================= */
+#weathaff > a,
+#turntale > a,
+#merge_film_festival > a{
+  display: block !important;
+  text-align: center !important;
+  margin: 8px auto !important;
 }
