@@ -177,6 +177,10 @@ hr{
   isolation: isolate;
 }
 
+#menu .sheet-content > h2{
+  font-size: 1.3em !important;
+}
+
 #music > h1::before,
 #education > h1::before,
 #short_films > h1::before,
@@ -348,6 +352,12 @@ hr{
 /* =========================================================
    5. EDUCATION ICONS - display as-is from img folder
    ========================================================= */
+#lilu1 .icon_lilu,
+#cisa .icon_cisa,
+#la_sapienza .icon{
+  mix-blend-mode: multiply !important;
+}
+
 #lilu1 .icon_lilu:hover,
 #cisa .icon_cisa:hover,
 #usi .icon:hover,
