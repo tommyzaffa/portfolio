@@ -358,6 +358,12 @@ hr{
   mix-blend-mode: multiply !important;
 }
 
+/* LiLu1 icon has scale:140% so its visual bottom overflows the layout box.
+   Push the wavy underline down to clear the visible icon edge. */
+#lilu1 > a:hover{
+  padding-bottom: 14px !important;
+}
+
 #lilu1 .icon_lilu:hover,
 #cisa .icon_cisa:hover,
 #usi .icon:hover,
