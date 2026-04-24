@@ -458,10 +458,8 @@ hr{
 #weathaff > a,
 #turntale > a,
 #merge_film_festival > a{
-  display: block !important;
-  width: fit-content !important;
-  text-align: center !important;
-  margin: 8px auto !important;
+  display: inline-block !important;
+  margin: 8px 0 !important;
 }
 
 /* =========================================================
