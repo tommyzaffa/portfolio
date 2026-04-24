@@ -163,7 +163,8 @@ hr{
 #short_films > h1,
 #contact > h1,
 #jobs_stages > h1,
-#apps_sites > h1{
+#apps_sites > h1,
+#menu .sheet-content > h2{
   font-family: 'Starboard DEMO', 'Bradley Hand', 'Comic Sans MS', cursive !important;
   text-transform: none !important;
   text-decoration: none !important;
@@ -181,7 +182,8 @@ hr{
 #short_films > h1::before,
 #contact > h1::before,
 #jobs_stages > h1::before,
-#apps_sites > h1::before{
+#apps_sites > h1::before,
+#menu .sheet-content > h2::before{
   content: "";
   position: absolute;
   left: 4px; right: 4px;
@@ -199,7 +201,8 @@ hr{
 #short_films > h1::after,
 #contact > h1::after,
 #jobs_stages > h1::after,
-#apps_sites > h1::after{
+#apps_sites > h1::after,
+#menu .sheet-content > h2::after{
   content: "";
   position: absolute;
   right: -18px;
@@ -343,43 +346,8 @@ hr{
 }
 
 /* =========================================================
-   5. EDUCATION ICONS - square images clipped to circle, no frills.
-   Match the other pages: grayscale -> color + slight zoom on hover.
+   5. EDUCATION ICONS - display as-is from img folder
    ========================================================= */
-#lilu1 .icon_lilu,
-#cisa .icon_cisa,
-#usi .icon{
-  aspect-ratio: 1 / 1 !important;
-  border-radius: 50% !important;
-  object-fit: cover !important;
-  background: transparent !important;
-  padding: 0 !important;
-  box-shadow: none !important;
-  scale: 1 !important;
-}
-
-/* LiLu1: keep the round badge the same size but show the whole
-   logo inside (contain + padding + off-white fill behind). */
-#lilu1 .icon_lilu{
-  object-fit: contain !important;
-  padding: 6px !important;
-  box-sizing: border-box !important;
-  background: #ffffff !important;
-}
-
-/* La Sapienza: no forced square. Let the image keep its natural
-   aspect ratio and just round the corners into an oval badge that
-   hugs the logo. */
-#la_sapienza .icon{
-  aspect-ratio: auto !important;
-  border-radius: 50% !important;
-  object-fit: contain !important;
-  background: transparent !important;
-  padding: 0 !important;
-  box-shadow: none !important;
-  scale: 1 !important;
-}
-
 #lilu1 .icon_lilu:hover,
 #cisa .icon_cisa:hover,
 #usi .icon:hover,
