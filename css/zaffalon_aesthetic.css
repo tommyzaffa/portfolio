@@ -459,15 +459,9 @@ hr{
 #turntale > a,
 #merge_film_festival > a{
   display: block !important;
+  width: fit-content !important;
   text-align: center !important;
   margin: 8px auto !important;
-}
-
-#weathaff > a:hover,
-#turntale > a:hover,
-#merge_film_festival > a:hover{
-  background-image: none !important;
-  padding-bottom: 0 !important;
 }
 
 /* =========================================================
