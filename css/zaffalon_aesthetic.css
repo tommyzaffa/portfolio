@@ -117,13 +117,17 @@
     border-radius: 0 !important;
   }
 
-  /* On mobile: move mix-blend-mode from <a> to <img> directly.
-     iOS Safari conflicts when filter:grayscale and mix-blend-mode are in
-     a parent-child compositing chain. No filter needed on touch devices. */
+  /* On mobile: give <a> an explicit compositing group (isolation + bg color)
+     so the <img> multiply-blend has a definite cream backdrop.
+     iOS Safari doesn't reliably blend against ancestor GPU layer backgrounds,
+     so we create a self-contained group instead of relying on .sheet-content. */
   #lilu1 > a,
   #cisa > a,
   #la_sapienza > a{
     mix-blend-mode: normal !important;
+    isolation: isolate;
+    background-color: var(--paper-bg);
+    display: inline-block;
   }
 
   #lilu1 .icon_lilu,
@@ -388,10 +392,18 @@ hr{
   mix-blend-mode: normal !important;
 }
 
-/* LiLu1 icon has scale:140% so its visual bottom overflows the layout box.
-   Push the wavy underline down to clear the visible icon edge. */
+/* Icons with scale > 100% overflow their layout box visually.
+   Push the wavy underline down so it clears the visible icon edge. */
 #lilu1 > a:hover{
   padding-bottom: 14px !important;
+}
+
+#cisa > a:hover{
+  padding-bottom: 10px !important;
+}
+
+#la_sapienza > a:hover{
+  padding-bottom: 6px !important;
 }
 
 #lilu1 .icon_lilu:hover,
