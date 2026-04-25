@@ -358,10 +358,18 @@ hr{
 /* =========================================================
    5. EDUCATION ICONS - display as-is from img folder
    ========================================================= */
+/* Move multiply to <a> so iOS Safari doesn't conflict with filter:grayscale on <img> */
+#lilu1 > a,
+#cisa > a,
+#la_sapienza > a{
+  mix-blend-mode: multiply !important;
+  display: inline-block;
+}
+
 #lilu1 .icon_lilu,
 #cisa .icon_cisa,
 #la_sapienza .icon{
-  mix-blend-mode: multiply !important;
+  mix-blend-mode: normal !important;
 }
 
 /* LiLu1 icon has scale:140% so its visual bottom overflows the layout box.
