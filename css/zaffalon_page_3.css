@@ -327,13 +327,9 @@ body::-webkit-scrollbar {
     h3 { font-size: 16px; letter-spacing: 1px; }
     p  { font-size: 15px; line-height: 1.65; }
   
-    .icon, .icon_lilu, .icon_cisa {
+    .icon {
       width: 56px;
       max-width: 20vw;
-    }
-  
-    .icon_lilu, .icon_cisa {
-      scale: 1;
     }
   
     #music:hover .icon,

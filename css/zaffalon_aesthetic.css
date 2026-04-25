@@ -117,43 +117,6 @@
     border-radius: 0 !important;
   }
 
-  /* On mobile: mix-blend-mode on <img> is unreliable on iOS Safari when
-     an ancestor has transform (GPU layer boundary breaks compositing).
-     Instead: show the icon as CSS background-image on <a> with
-     background-blend-mode:multiply against a cream background-color —
-     this blend is self-contained on the element and always works on iOS.
-     The <img> is hidden (opacity:0) but keeps its layout dimensions
-     so the <a> box stays the right size. */
-  #lilu1 > a,
-  #cisa > a,
-  #la_sapienza > a{
-    mix-blend-mode: normal !important;
-    display: inline-block;
-    width: 90px;
-    max-width: 25vw;
-    aspect-ratio: 1;
-    background-color: #faf4e6;
-    background-blend-mode: darken;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  #lilu1 > a{ background-image: url('../images/lilu1.jpg'); }
-  #cisa > a{ background-image: url('../images/cisa.png'); }
-  #la_sapienza > a{ background-image: url('../images/sapienza.png'); }
-
-  #lilu1 .icon_lilu,
-  #cisa .icon_cisa,
-  #la_sapienza .icon{
-    mix-blend-mode: normal !important;
-    filter: none !important;
-    opacity: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-
   /* KRAFT HEADER - the top strip with the drag handle looks like the
      cardboard back of a notepad (different color than the paper surface). */
   #menu .sheet-handle,
@@ -393,38 +356,10 @@ hr{
 }
 
 /* =========================================================
-   5. EDUCATION ICONS - display as-is from img folder
+   5. EDUCATION ICONS - hover scale (same as other icons)
    ========================================================= */
-/* Move multiply to <a> so iOS Safari doesn't conflict with filter:grayscale on <img> */
-#lilu1 > a,
-#cisa > a,
-#la_sapienza > a{
-  mix-blend-mode: multiply !important;
-  display: inline;
-}
-
-#lilu1 .icon_lilu,
-#cisa .icon_cisa,
-#la_sapienza .icon{
-  mix-blend-mode: normal !important;
-}
-
-/* Icons with scale > 100% overflow their layout box visually.
-   Push the wavy underline down so it clears the visible icon edge. */
-#lilu1 > a:hover{
-  padding-bottom: 14px !important;
-}
-
-#cisa > a:hover{
-  padding-bottom: 8px !important;
-}
-
-#la_sapienza > a:hover{
-  padding-bottom: 10px !important;
-}
-
-#lilu1 .icon_lilu:hover,
-#cisa .icon_cisa:hover,
+#lilu1 .icon:hover,
+#cisa .icon:hover,
 #usi .icon:hover,
 #la_sapienza .icon:hover{
   transform: scale(1.2) !important;
