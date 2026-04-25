@@ -117,24 +117,35 @@
     border-radius: 0 !important;
   }
 
-  /* On mobile: give <a> an explicit compositing group (isolation + bg color)
-     so the <img> multiply-blend has a definite cream backdrop.
-     iOS Safari doesn't reliably blend against ancestor GPU layer backgrounds,
-     so we create a self-contained group instead of relying on .sheet-content. */
+  /* On mobile: mix-blend-mode on <img> is unreliable on iOS Safari when
+     an ancestor has transform (GPU layer boundary breaks compositing).
+     Instead: show the icon as CSS background-image on <a> with
+     background-blend-mode:multiply against a cream background-color —
+     this blend is self-contained on the element and always works on iOS.
+     The <img> is hidden (opacity:0) but keeps its layout dimensions
+     so the <a> box stays the right size. */
   #lilu1 > a,
   #cisa > a,
   #la_sapienza > a{
     mix-blend-mode: normal !important;
-    isolation: isolate;
-    background-color: var(--paper-bg);
     display: inline-block;
+    background-color: #faf4e6;
+    background-blend-mode: multiply;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
+
+  #lilu1 > a{ background-image: url('../images/lilu1.jpg'); }
+  #cisa > a{ background-image: url('../images/cisa.png'); }
+  #la_sapienza > a{ background-image: url('../images/sapienza.png'); }
 
   #lilu1 .icon_lilu,
   #cisa .icon_cisa,
   #la_sapienza .icon{
-    mix-blend-mode: multiply !important;
+    mix-blend-mode: normal !important;
     filter: none !important;
+    opacity: 0;
   }
 
   /* KRAFT HEADER - the top strip with the drag handle looks like the
@@ -399,7 +410,7 @@ hr{
 }
 
 #cisa > a:hover{
-  padding-bottom: 10px !important;
+  padding-bottom: 14px !important;
 }
 
 #la_sapienza > a:hover{
