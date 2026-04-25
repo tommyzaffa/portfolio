@@ -117,6 +117,22 @@
     border-radius: 0 !important;
   }
 
+  /* On mobile: move mix-blend-mode from <a> to <img> directly.
+     iOS Safari conflicts when filter:grayscale and mix-blend-mode are in
+     a parent-child compositing chain. No filter needed on touch devices. */
+  #lilu1 > a,
+  #cisa > a,
+  #la_sapienza > a{
+    mix-blend-mode: normal !important;
+  }
+
+  #lilu1 .icon_lilu,
+  #cisa .icon_cisa,
+  #la_sapienza .icon{
+    mix-blend-mode: multiply !important;
+    filter: none !important;
+  }
+
   /* KRAFT HEADER - the top strip with the drag handle looks like the
      cardboard back of a notepad (different color than the paper surface). */
   #menu .sheet-handle,
@@ -363,7 +379,7 @@ hr{
 #cisa > a,
 #la_sapienza > a{
   mix-blend-mode: multiply !important;
-  display: inline-block;
+  display: inline;
 }
 
 #lilu1 .icon_lilu,
