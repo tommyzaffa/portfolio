@@ -332,8 +332,8 @@ body::-webkit-scrollbar {
       max-width: 20vw;
     }
 
-    #lilu1 .icon { width: 67px !important; max-width: 24vw !important; }
-    #cisa .icon  { width: 62px !important; max-width: 22vw !important; }
+    #lilu1 .icon { width: 63px !important; max-width: 23vw !important; }
+    #cisa .icon  { width: 59px !important; max-width: 21vw !important; }
   
     #music:hover .icon,
     #music:active .icon,
