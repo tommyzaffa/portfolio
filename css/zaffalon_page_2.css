@@ -403,8 +403,8 @@ body::-webkit-scrollbar {
     p  { font-size: 15px; line-height: 1.65; }
   
     .icon, .icon_lilu, .icon_cisa {
-      width: 90px;
-      max-width: 25vw;
+      width: 70px;
+      max-width: 22vw;
     }
   
     .icon_lilu, .icon_cisa {

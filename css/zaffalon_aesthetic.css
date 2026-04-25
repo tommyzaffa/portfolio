@@ -129,6 +129,9 @@
   #la_sapienza > a{
     mix-blend-mode: normal !important;
     display: inline-block;
+    width: 90px;
+    max-width: 25vw;
+    aspect-ratio: 1;
     background-color: #faf4e6;
     background-blend-mode: multiply;
     background-size: contain;
@@ -146,6 +149,9 @@
     mix-blend-mode: normal !important;
     filter: none !important;
     opacity: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
   }
 
   /* KRAFT HEADER - the top strip with the drag handle looks like the
@@ -414,7 +420,7 @@ hr{
 }
 
 #la_sapienza > a:hover{
-  padding-bottom: 6px !important;
+  padding-bottom: 10px !important;
 }
 
 #lilu1 .icon_lilu:hover,
