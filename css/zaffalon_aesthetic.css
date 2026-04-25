@@ -364,6 +364,15 @@ hr{
   mix-blend-mode: multiply !important;
 }
 
+/* On mobile, .sheet-content creates its own stacking context (z-index:1),
+   which prevents mix-blend-mode from seeing the ::before paper background.
+   Giving it the paper base color restores correct blending for edu icons. */
+@media (max-width: 900px) {
+  #education_section .sheet-content {
+    background-color: var(--paper-bg) !important;
+  }
+}
+
 /* LiLu1 icon has scale:140% so its visual bottom overflows the layout box.
    Push the wavy underline down to clear the visible icon edge. */
 #lilu1 > a:hover{
