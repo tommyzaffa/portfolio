@@ -134,6 +134,15 @@ a:link
     transition: color 0.3s ease, border-color 0.3s ease;
 }
 
+#pronto_pizza_da_fabio:hover h2,
+#pronto_pizza_da_fabio:hover p,
+#pronto_pizza_da_fabio:hover .badge
+{
+    color: orange;
+    border-color: orange;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
 #home:hover h3
 {
     color: orange;
@@ -351,6 +360,10 @@ body::-webkit-scrollbar {
     #merge_film_festival:active .icon,
     #merge_film_festival:focus-within .icon,
 
+    #pronto_pizza_da_fabio:hover .icon,
+    #pronto_pizza_da_fabio:active .icon,
+    #pronto_pizza_da_fabio:focus-within .icon,
+
     #home:hover .icon,
     #home:active .icon,
     #home:focus-within .icon {
@@ -358,7 +371,7 @@ body::-webkit-scrollbar {
       transform: scale(1.1);
     }
 
-    #apps_sites, #weathaff, #turntale, #merge_film_festival, #home {
+    #apps_sites, #weathaff, #turntale, #pronto_pizza_da_fabio, #merge_film_festival, #home {
       -webkit-tap-highlight-color: transparent;
     }
 
