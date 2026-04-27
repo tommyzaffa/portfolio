@@ -143,6 +143,24 @@ a:link
     transition: color 0.3s ease, border-color 0.3s ease;
 }
 
+#popaci:hover h2,
+#popaci:hover p,
+#popaci:hover .badge
+{
+    color: orange;
+    border-color: orange;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+#ondus_tattoo:hover h2,
+#ondus_tattoo:hover p,
+#ondus_tattoo:hover .badge
+{
+    color: orange;
+    border-color: orange;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
 #home:hover h3
 {
     color: orange;
@@ -364,6 +382,10 @@ body::-webkit-scrollbar {
     #pronto_pizza_da_fabio:active .icon,
     #pronto_pizza_da_fabio:focus-within .icon,
 
+    #ondus_tattoo:hover .icon,
+    #ondus_tattoo:active .icon,
+    #ondus_tattoo:focus-within .icon,
+
     #home:hover .icon,
     #home:active .icon,
     #home:focus-within .icon {
@@ -371,7 +393,7 @@ body::-webkit-scrollbar {
       transform: scale(1.1);
     }
 
-    #apps_sites, #weathaff, #turntale, #pronto_pizza_da_fabio, #merge_film_festival, #home {
+    #apps_sites, #weathaff, #turntale, #pronto_pizza_da_fabio, #popaci, #merge_film_festival, #ondus_tattoo, #home {
       -webkit-tap-highlight-color: transparent;
     }
 
