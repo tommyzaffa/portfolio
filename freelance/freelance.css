@@ -15,6 +15,26 @@
     --sans: 'Inter', system-ui, -apple-system, sans-serif;
     --radius: 22px;
     --maxw: 1200px;
+
+    /* ===== ANCHOR SCROLL OFFSETS =====
+       Fine-tune where each CTA lands when clicked.
+       Higher value = lands further DOWN (more space above the section).
+       Lower value = lands further UP (closer to top of viewport).
+       Tweak in 4–8px steps for "millimetric" adjustments. */
+    --anchor-offset-work:    90px;  /* "Vedi i lavori" → #work */
+    --anchor-offset-contact: 90px;  /* "Inizia un progetto" → #contact */
+}
+
+/* Apply the offsets to the anchored sections */
+#work    { scroll-margin-top: var(--anchor-offset-work); }
+#contact { scroll-margin-top: var(--anchor-offset-contact); }
+
+/* Mobile gets a smaller default since the topbar is more compact */
+@media (max-width: 600px) {
+    :root {
+        --anchor-offset-work:    70px;
+        --anchor-offset-contact: 70px;
+    }
 }
 
 /* ===== RESET ===== */
