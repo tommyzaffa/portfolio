@@ -161,6 +161,15 @@ a:link
     transition: color 0.3s ease, border-color 0.3s ease;
 }
 
+#samuel_rhawi:hover h2,
+#samuel_rhawi:hover p,
+#samuel_rhawi:hover .badge
+{
+    color: orange;
+    border-color: orange;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
 #home:hover h3
 {
     color: orange;
@@ -386,6 +395,10 @@ body::-webkit-scrollbar {
     #ondus_tattoo:active .icon,
     #ondus_tattoo:focus-within .icon,
 
+    #samuel_rhawi:hover .icon,
+    #samuel_rhawi:active .icon,
+    #samuel_rhawi:focus-within .icon,
+
     #home:hover .icon,
     #home:active .icon,
     #home:focus-within .icon {
@@ -393,7 +406,7 @@ body::-webkit-scrollbar {
       transform: scale(1.1);
     }
 
-    #apps_sites, #weathaff, #turntale, #pronto_pizza_da_fabio, #popaci, #merge_film_festival, #ondus_tattoo, #home {
+    #apps_sites, #weathaff, #turntale, #pronto_pizza_da_fabio, #popaci, #merge_film_festival, #ondus_tattoo, #samuel_rhawi, #home {
       -webkit-tap-highlight-color: transparent;
     }
 
