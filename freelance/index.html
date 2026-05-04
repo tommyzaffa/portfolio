@@ -8,7 +8,7 @@
         <meta name="keywords" content="freelance web developer, custom websites, small business websites, boutique website, restaurant website, web design, responsive websites, freelance Lugano, Ticino">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="theme-color" content="#111111">
+        <meta name="theme-color" content="#0b0b0d">
         <meta charset="UTF-8">
 
         <!-- Open Graph -->
@@ -22,112 +22,234 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="freelance.css?v=1">
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="freelance.css?v=2">
     </head>
     <body>
 
-        <!-- LANGUAGE SWITCHER -->
-        <nav class="lang-switcher" aria-label="Language switcher">
-            <button type="button" data-lang="en" class="lang-btn active" aria-label="English">EN</button>
-            <button type="button" data-lang="it" class="lang-btn" aria-label="Italiano">IT</button>
-            <button type="button" data-lang="fr" class="lang-btn" aria-label="Français">FR</button>
-            <button type="button" data-lang="de" class="lang-btn" aria-label="Deutsch">DE</button>
-        </nav>
+        <!-- ANIMATED BACKGROUND -->
+        <div class="bg-blobs" aria-hidden="true">
+            <span class="blob blob-1"></span>
+            <span class="blob blob-2"></span>
+            <span class="blob blob-3"></span>
+            <span class="grain"></span>
+        </div>
 
-        <!-- HERO -->
-        <header class="hero">
-            <h1 data-i18n="hero_title">Websites that bring your business online.</h1>
-            <p class="hero-sub" data-i18n="hero_sub">Modern, fast and mobile-friendly websites — designed for small businesses, boutiques, restaurants and independent professionals who need a clean digital presence.</p>
-            <a href="#contact" class="cta-btn" data-i18n="hero_cta">Get in touch</a>
+        <!-- TOP BAR -->
+        <header class="topbar">
+            <a href="#top" class="brand">
+                <span class="brand-dot"></span>
+                <span class="brand-name">Thomas Zaffalon</span>
+                <span class="brand-tag" data-i18n="brand_tag">Freelance · Web</span>
+            </a>
+
+            <nav class="lang-switcher" aria-label="Language switcher">
+                <button type="button" data-lang="en" class="lang-btn active" aria-label="English">EN</button>
+                <button type="button" data-lang="it" class="lang-btn" aria-label="Italiano">IT</button>
+                <button type="button" data-lang="fr" class="lang-btn" aria-label="Français">FR</button>
+                <button type="button" data-lang="de" class="lang-btn" aria-label="Deutsch">DE</button>
+            </nav>
         </header>
 
-        <!-- ABOUT -->
-        <section class="about">
-            <h2 data-i18n="about_title">Hi, I'm Thomas.</h2>
-            <p data-i18n="about_text">I build custom websites from scratch — no templates, no bloated page builders. Every site is tailored to the business, its style and its customers. I focus on what matters: a site that loads fast, looks good on every device, and actually helps you reach people.</p>
-        </section>
+        <main id="top">
 
-        <!-- SERVICES -->
-        <section class="services">
-            <h2 data-i18n="services_title">What I do</h2>
-            <div class="service-grid">
-                <div class="service-card">
-                    <h3 data-i18n="service_1_title">Custom websites</h3>
-                    <p data-i18n="service_1_text">Hand-coded sites built around your brand and your needs.</p>
+            <!-- HERO -->
+            <section class="hero">
+                <div class="hero-eyebrow">
+                    <span class="dot-pulse"></span>
+                    <span data-i18n="hero_eyebrow">Available for new projects</span>
                 </div>
-                <div class="service-card">
-                    <h3 data-i18n="service_2_title">Mobile-first design</h3>
-                    <p data-i18n="service_2_text">Smooth experience on smartphones, tablets and desktops.</p>
+
+                <h1 class="hero-title">
+                    <span class="line" data-i18n="hero_line_1">Websites that bring</span>
+                    <span class="line"><span class="serif italic" data-i18n="hero_line_2">your business</span></span>
+                    <span class="line" data-i18n="hero_line_3">truly online.</span>
+                </h1>
+
+                <p class="hero-sub" data-i18n="hero_sub">Modern, fast and mobile-friendly websites — designed for small businesses, boutiques, restaurants and independent professionals who need a clean digital presence.</p>
+
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary" data-i18n="hero_cta">Start a project</a>
+                    <a href="#work" class="btn btn-ghost" data-i18n="hero_cta_2">See recent work</a>
                 </div>
-                <div class="service-card">
-                    <h3 data-i18n="service_3_title">Performance &amp; SEO</h3>
-                    <p data-i18n="service_3_text">Fast loading, clean code and basic SEO so people can find you.</p>
-                </div>
-                <div class="service-card">
-                    <h3 data-i18n="service_4_title">Ongoing care</h3>
-                    <p data-i18n="service_4_text">Support and updates after launch — your site keeps evolving with you.</p>
+            </section>
+
+            <!-- MARQUEE -->
+            <div class="marquee" aria-hidden="true">
+                <div class="marquee-track">
+                    <span data-i18n="marquee_1">Custom websites</span><span class="sep">✦</span>
+                    <span data-i18n="marquee_2">Mobile-first design</span><span class="sep">✦</span>
+                    <span data-i18n="marquee_3">SEO &amp; performance</span><span class="sep">✦</span>
+                    <span data-i18n="marquee_4">Hand-coded, no templates</span><span class="sep">✦</span>
+                    <span data-i18n="marquee_5">Available worldwide</span><span class="sep">✦</span>
+
+                    <span data-i18n="marquee_1">Custom websites</span><span class="sep">✦</span>
+                    <span data-i18n="marquee_2">Mobile-first design</span><span class="sep">✦</span>
+                    <span data-i18n="marquee_3">SEO &amp; performance</span><span class="sep">✦</span>
+                    <span data-i18n="marquee_4">Hand-coded, no templates</span><span class="sep">✦</span>
+                    <span data-i18n="marquee_5">Available worldwide</span><span class="sep">✦</span>
                 </div>
             </div>
-        </section>
 
-        <!-- WORK -->
-        <section class="work">
-            <h2 data-i18n="work_title">Recent work</h2>
-            <p class="work-sub" data-i18n="work_sub">A few of the websites I've built for real businesses.</p>
+            <!-- ABOUT -->
+            <section class="about">
+                <span class="section-num">01</span>
+                <h2 class="section-title">
+                    <span data-i18n="about_kicker">Hi, I'm Thomas —</span>
+                    <span class="serif italic muted" data-i18n="about_kicker_2">a freelance web developer.</span>
+                </h2>
+                <p class="lead" data-i18n="about_text">I build custom websites from scratch — no templates, no bloated page builders. Every site is tailored to the business, its style and its customers. I focus on what matters: a site that loads fast, looks good on every device, and actually helps you reach people.</p>
+            </section>
 
-            <div class="work-grid">
+            <!-- SERVICES -->
+            <section class="services">
+                <span class="section-num">02</span>
+                <h2 class="section-title"><span data-i18n="services_title">What I do</span></h2>
 
-                <a class="work-card" href="https://www.ondustattoo.ink" target="_blank" rel="noopener">
-                    <img src="../images/ondus.jpg" alt="Ondus Tattoo">
-                    <div class="work-info">
-                        <h3>Ondus Tattoo</h3>
-                        <span class="work-tag" data-i18n="tag_tattoo">Tattoo studio · Lugano</span>
+                <ol class="service-list">
+                    <li class="service-row">
+                        <span class="row-num">01</span>
+                        <div class="row-body">
+                            <h3 data-i18n="service_1_title">Custom websites</h3>
+                            <p data-i18n="service_1_text">Hand-coded sites built around your brand, your tone and your customers — never a template.</p>
+                        </div>
+                    </li>
+                    <li class="service-row">
+                        <span class="row-num">02</span>
+                        <div class="row-body">
+                            <h3 data-i18n="service_2_title">Mobile-first design</h3>
+                            <p data-i18n="service_2_text">Smooth, fast experience on smartphones, tablets and desktops — your customers' devices come first.</p>
+                        </div>
+                    </li>
+                    <li class="service-row">
+                        <span class="row-num">03</span>
+                        <div class="row-body">
+                            <h3 data-i18n="service_3_title">Performance &amp; SEO</h3>
+                            <p data-i18n="service_3_text">Fast loading, clean semantic code and the SEO basics so people actually find you.</p>
+                        </div>
+                    </li>
+                    <li class="service-row">
+                        <span class="row-num">04</span>
+                        <div class="row-body">
+                            <h3 data-i18n="service_4_title">Ongoing care</h3>
+                            <p data-i18n="service_4_text">Support, updates and small improvements after launch — your site keeps evolving with you.</p>
+                        </div>
+                    </li>
+                </ol>
+            </section>
+
+            <!-- WORK -->
+            <section class="work" id="work">
+                <span class="section-num">03</span>
+                <h2 class="section-title">
+                    <span data-i18n="work_title">Recent work</span>
+                </h2>
+                <p class="lead muted" data-i18n="work_sub">A few of the websites I've built for real businesses.</p>
+
+                <div class="work-grid">
+
+                    <a class="work-card" href="https://www.ondustattoo.ink" target="_blank" rel="noopener">
+                        <div class="work-image">
+                            <img src="../images/ondus.jpg" alt="Ondus Tattoo">
+                        </div>
+                        <div class="work-meta">
+                            <h3>Ondus Tattoo</h3>
+                            <span class="work-tag" data-i18n="tag_tattoo">Tattoo studio · Lugano</span>
+                            <span class="work-arrow" aria-hidden="true">→</span>
+                        </div>
+                    </a>
+
+                    <a class="work-card" href="https://www.ristoranteppdafabio.it" target="_blank" rel="noopener">
+                        <div class="work-image">
+                            <img src="../images/prontopizza.png" alt="Pronto Pizza da Fabio">
+                        </div>
+                        <div class="work-meta">
+                            <h3>Pronto Pizza da Fabio</h3>
+                            <span class="work-tag" data-i18n="tag_restaurant">Restaurant &amp; pizzeria</span>
+                            <span class="work-arrow" aria-hidden="true">→</span>
+                        </div>
+                    </a>
+
+                    <a class="work-card" href="https://samuelrhawibynursel.com" target="_blank" rel="noopener">
+                        <div class="work-image">
+                            <img src="../images/samuel-rhawi.webp" alt="Samuel Rhawi By Nursel">
+                        </div>
+                        <div class="work-meta">
+                            <h3>Samuel Rhawi By Nursel</h3>
+                            <span class="work-tag" data-i18n="tag_boutique">Boutique</span>
+                            <span class="work-arrow" aria-hidden="true">→</span>
+                        </div>
+                    </a>
+
+                </div>
+            </section>
+
+            <!-- REVIEWS -->
+            <section class="reviews">
+                <span class="section-num">04</span>
+                <h2 class="section-title"><span data-i18n="reviews_title">What clients say</span></h2>
+                <p class="lead muted" data-i18n="reviews_sub">Real feedback from the businesses I've worked with.</p>
+
+                <div class="reviews-grid">
+                    <article class="review-card placeholder">
+                        <span class="quote-mark">“”</span>
+                        <p class="review-text" data-i18n="review_placeholder">Reviews from clients will appear here soon.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- CONTACT -->
+            <section class="contact" id="contact">
+                <span class="section-num">05</span>
+                <h2 class="section-title">
+                    <span data-i18n="contact_kicker">Have a project? </span>
+                    <span class="serif italic" data-i18n="contact_kicker_2">Let's talk.</span>
+                </h2>
+                <p class="lead muted" data-i18n="contact_text">Drop me a message — I usually reply within a day.</p>
+
+                <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-row">
+                        <label class="field">
+                            <span data-i18n="form_name">Name</span>
+                            <input type="text" name="name" required autocomplete="name">
+                        </label>
+                        <label class="field">
+                            <span data-i18n="form_email">Email</span>
+                            <input type="email" name="email" required autocomplete="email">
+                        </label>
                     </div>
-                </a>
+                    <label class="field">
+                        <span data-i18n="form_business">Business / Project</span>
+                        <input type="text" name="business" autocomplete="organization">
+                    </label>
+                    <label class="field">
+                        <span data-i18n="form_message">Message</span>
+                        <textarea name="message" rows="5" required></textarea>
+                    </label>
 
-                <a class="work-card" href="https://www.ristoranteppdafabio.it" target="_blank" rel="noopener">
-                    <img src="../images/prontopizza.png" alt="Pronto Pizza da Fabio">
-                    <div class="work-info">
-                        <h3>Pronto Pizza da Fabio</h3>
-                        <span class="work-tag" data-i18n="tag_restaurant">Restaurant &amp; pizzeria</span>
+                    <!-- honeypot anti-spam (formspree convention) -->
+                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary" data-i18n="form_submit">Send message</button>
+                        <a href="mailto:thomas@tommyzaffa.com?subject=Ciao!&body=Ciao%2C%0A%0ATi%20scrivo%20dal%20sito...%0A" class="form-alt" data-i18n="form_or">or write me directly</a>
                     </div>
-                </a>
 
-                <a class="work-card" href="https://samuelrhawibynursel.com" target="_blank" rel="noopener">
-                    <img src="../images/samuel-rhawi.webp" alt="Samuel Rhawi By Nursel">
-                    <div class="work-info">
-                        <h3>Samuel Rhawi By Nursel</h3>
-                        <span class="work-tag" data-i18n="tag_boutique">Boutique</span>
-                    </div>
-                </a>
+                    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+                </form>
+            </section>
 
-            </div>
-        </section>
-
-        <!-- REVIEWS -->
-        <section class="reviews">
-            <h2 data-i18n="reviews_title">What clients say</h2>
-            <p class="reviews-sub" data-i18n="reviews_sub">Real feedback from the businesses I've worked with.</p>
-
-            <div class="reviews-grid">
-                <!-- Placeholder cards — fill once you collect actual reviews -->
-                <article class="review-card placeholder">
-                    <p class="review-text" data-i18n="review_placeholder">Reviews from clients will appear here soon.</p>
-                </article>
-            </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section class="contact" id="contact">
-            <h2 data-i18n="contact_title">Let's talk</h2>
-            <p data-i18n="contact_text">Have a project in mind, or want to bring your business online? Drop me a message — I usually reply within a day.</p>
-            <a href="mailto:thomas@tommyzaffa.com?subject=Ciao!&body=Ciao%2C%0A%0ATi%20scrivo%20dal%20sito...%0A" class="cta-btn" data-i18n="contact_cta">Send an email</a>
-        </section>
+        </main>
 
         <footer class="footer">
-            <p>© <span id="year"></span> Thomas Zaffalon</p>
+            <div class="footer-line">
+                <span>© <span id="year"></span></span>
+                <a href="https://www.tommyzaffa.com" target="_blank" rel="noopener" class="footer-name">Thomas Zaffalon</a>
+            </div>
+            <div class="footer-meta" data-i18n="footer_tag">Freelance web developer — Lugano, Switzerland</div>
         </footer>
 
-        <script src="freelance.js?v=1" defer></script>
+        <script src="freelance.js?v=2" defer></script>
     </body>
 </html>
