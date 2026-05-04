@@ -39,13 +39,20 @@
 
 /* ===== RESET ===== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    background: var(--bg); /* fills iOS Safari safe areas (notch / home bar) */
+    min-height: 100%;
+}
 body {
     font-family: var(--sans);
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
     overflow-x: hidden;
+    min-height: 100vh;
+    min-height: 100dvh; /* dynamic viewport — accounts for iOS Safari chrome */
     font-feature-settings: "ss01", "cv11";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -129,7 +136,11 @@ button { font: inherit; cursor: pointer; }
     align-items: center;
     justify-content: space-between;
     padding: 18px 28px;
-    background: linear-gradient(180deg, rgba(11, 11, 13, 0.7), rgba(11, 11, 13, 0));
+    /* respect iOS notch & landscape safe areas */
+    padding-top: calc(18px + env(safe-area-inset-top));
+    padding-left: calc(28px + env(safe-area-inset-left));
+    padding-right: calc(28px + env(safe-area-inset-right));
+    background: linear-gradient(180deg, rgba(11, 11, 13, 0.85), rgba(11, 11, 13, 0));
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
 }
@@ -433,11 +444,15 @@ section + section { padding-top: 0; }
     aspect-ratio: 4 / 3;
     overflow: hidden;
     background: #1d1d22;
-    padding: 28px;
+    padding: 56px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+/* Per-card icon background (matches the icon's own background color) */
+.work-image-light { background: #ffffff; }
+.work-image-dark  { background: #000000; }
+
 .work-image img {
     max-width: 100%;
     max-height: 100%;
@@ -599,9 +614,16 @@ section + section { padding-top: 0; }
 .footer {
     border-top: 1px solid var(--line);
     padding: 50px 28px;
+    /* respect iOS home indicator safe area at bottom */
+    padding-bottom: calc(50px + env(safe-area-inset-bottom));
+    padding-left: calc(28px + env(safe-area-inset-left));
+    padding-right: calc(28px + env(safe-area-inset-right));
     text-align: center;
     color: var(--text-dim);
     font-size: 0.88rem;
+    background: var(--bg);
+    position: relative;
+    z-index: 1;
 }
 .footer-line {
     display: inline-flex;
