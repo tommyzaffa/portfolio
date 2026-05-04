@@ -440,6 +440,21 @@ hr{
   padding-bottom: 3px;
 }
 
+.privacy-mini {
+  text-align: center;
+  font-size: 0.82rem;
+  margin: 22px 0 0 !important;
+  opacity: 0.78;
+}
+.privacy-mini a,
+#copyright a {
+  color: inherit !important;
+  text-decoration: underline !important;
+  text-decoration-color: var(--paper-accent) !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 3px !important;
+}
+
 /* =========================================================
    9. HELLO hover color tuned to paper palette
    ========================================================= */
