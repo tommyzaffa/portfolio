@@ -462,10 +462,23 @@ section + section { padding-top: 0; }
     transition: transform 0.7s ease, filter 0.5s ease;
     filter: saturate(0.85);
 }
-/* Blend modes hide JPG/compression seams around icon edges
-   (any off-white blends seamlessly into the matching background) */
+/* Blend modes + edge mask hide JPG compression seams around icons.
+   - blend mode merges most off-white/off-black pixels with the background
+   - the mask fades the very bottom of the image into transparent so any
+     remaining horizontal seam blends into the wrapper background */
 .work-image-light img { mix-blend-mode: multiply; }
 .work-image-dark  img { mix-blend-mode: screen; }
+
+.work-image img {
+    -webkit-mask-image: linear-gradient(to bottom,
+        #000 0,
+        #000 calc(100% - 6px),
+        transparent 100%);
+    mask-image: linear-gradient(to bottom,
+        #000 0,
+        #000 calc(100% - 6px),
+        transparent 100%);
+}
 
 .work-card:hover .work-image img {
     transform: scale(1.04);
