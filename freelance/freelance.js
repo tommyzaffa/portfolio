@@ -54,7 +54,8 @@
             form_success: "Thanks! I'll get back to you soon.",
             form_error: "Something went wrong. Please try again or email me directly.",
 
-            footer_tag: "Freelance web developer — Lugano, Switzerland"
+            footer_tag: "Freelance web developer — Lugano, Switzerland",
+            footer_privacy: "Privacy & Cookie Policy"
         },
 
         it: {
@@ -111,7 +112,8 @@
             form_success: "Grazie! Ti risponderò al più presto.",
             form_error: "Qualcosa è andato storto. Riprova o scrivimi via email.",
 
-            footer_tag: "Sviluppatore web freelance — Lugano, Svizzera"
+            footer_tag: "Sviluppatore web freelance — Lugano, Svizzera",
+            footer_privacy: "Privacy e Cookie Policy"
         },
 
         fr: {
@@ -168,7 +170,8 @@
             form_success: "Merci ! Je vous réponds bientôt.",
             form_error: "Une erreur est survenue. Réessayez ou écrivez-moi par email.",
 
-            footer_tag: "Développeur web freelance — Lugano, Suisse"
+            footer_tag: "Développeur web freelance — Lugano, Suisse",
+            footer_privacy: "Politique de confidentialité"
         },
 
         de: {
@@ -225,7 +228,8 @@
             form_success: "Danke! Ich melde mich bald.",
             form_error: "Etwas ist schiefgegangen. Versuchen Sie es erneut oder schreiben Sie mir per E-Mail.",
 
-            footer_tag: "Freiberuflicher Webentwickler — Lugano, Schweiz"
+            footer_tag: "Freiberuflicher Webentwickler — Lugano, Schweiz",
+            footer_privacy: "Datenschutz & Cookie-Richtlinie"
         }
     };
 

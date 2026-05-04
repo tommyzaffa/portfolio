@@ -663,6 +663,20 @@ section + section { padding-top: 0; }
     color: var(--text-dim);
     font-size: 0.82rem;
 }
+.footer-links {
+    margin-top: 12px;
+    font-size: 0.78rem;
+}
+.footer-links a {
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--line-strong);
+    padding-bottom: 1px;
+    transition: color 0.25s ease, border-color 0.25s ease;
+}
+.footer-links a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
 
 /* ===== REVEAL ANIMATIONS ===== */
 .reveal {
