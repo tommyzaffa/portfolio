@@ -462,6 +462,11 @@ section + section { padding-top: 0; }
     transition: transform 0.7s ease, filter 0.5s ease;
     filter: saturate(0.85);
 }
+/* Blend modes hide JPG/compression seams around icon edges
+   (any off-white blends seamlessly into the matching background) */
+.work-image-light img { mix-blend-mode: multiply; }
+.work-image-dark  img { mix-blend-mode: screen; }
+
 .work-card:hover .work-image img {
     transform: scale(1.04);
     filter: saturate(1);
