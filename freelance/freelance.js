@@ -39,7 +39,8 @@
 
             reviews_title: "What clients say",
             reviews_sub: "Real feedback from the businesses I've worked with.",
-            review_placeholder: "Reviews from clients will appear here soon.",
+            review_1_text: "Thomas reached out to me with a proposal for a website. Very wary after past negative experiences with “big names” in Ticino's communication scene, I let him develop his idea for my business. Now I can only say WOW! Beautiful work — I'm really happy with the result. Well done.",
+            review_1_author: "— Alan, Ondus Tattoo (owner & founder)",
 
             contact_kicker: "Have a project? ",
             contact_kicker_2: "Let's talk.",
@@ -97,7 +98,8 @@
 
             reviews_title: "Cosa dicono i clienti",
             reviews_sub: "Feedback reali dalle attività con cui ho lavorato.",
-            review_placeholder: "Le recensioni dei clienti appariranno qui presto.",
+            review_1_text: "Thomas si è presentato a me proponendomi una soluzione per un sito web. Molto diffidente, viste esperienze negative passate con “grandi nomi” della comunicazione ticinese, gli ho permesso di sviluppare la sua idea per la mia attività. Ora posso solo dire WOW! Lavoro bellissimo, sono davvero contento del risultato. Bravo.",
+            review_1_author: "— Alan, Ondus Tattoo (proprietario e fondatore)",
 
             contact_kicker: "Hai un progetto? ",
             contact_kicker_2: "Parliamone.",
@@ -155,7 +157,8 @@
 
             reviews_title: "Ce que disent les clients",
             reviews_sub: "Retours réels des entreprises avec qui j'ai travaillé.",
-            review_placeholder: "Les avis des clients apparaîtront bientôt ici.",
+            review_1_text: "Thomas est venu me voir en me proposant une solution pour un site web. Très méfiant après des expériences passées négatives avec de « grands noms » de la communication tessinoise, je l'ai laissé développer son idée pour mon activité. Aujourd'hui je peux seulement dire WOW ! Très beau travail, je suis vraiment content du résultat. Bravo.",
+            review_1_author: "— Alan, Ondus Tattoo (propriétaire et fondateur)",
 
             contact_kicker: "Un projet en tête ? ",
             contact_kicker_2: "Parlons-en.",
@@ -213,7 +216,8 @@
 
             reviews_title: "Was Kunden sagen",
             reviews_sub: "Echte Rückmeldungen von Unternehmen, mit denen ich gearbeitet habe.",
-            review_placeholder: "Kundenbewertungen erscheinen hier in Kürze.",
+            review_1_text: "Thomas kam mit einem Vorschlag für eine Website auf mich zu. Nach schlechten Erfahrungen mit „grossen Namen“ der Tessiner Kommunikationsbranche war ich sehr skeptisch — trotzdem habe ich ihn seine Idee für mein Geschäft umsetzen lassen. Heute kann ich nur sagen: WOW! Tolle Arbeit, ich bin wirklich zufrieden mit dem Ergebnis. Bravo.",
+            review_1_author: "— Alan, Ondus Tattoo (Inhaber und Gründer)",
 
             contact_kicker: "Ein Projekt im Kopf? ",
             contact_kicker_2: "Reden wir.",
