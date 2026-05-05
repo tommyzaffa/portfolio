@@ -286,13 +286,17 @@ section + section { padding-top: 0; }
 .hero-title .line {
     display: block;
     overflow: visible;
-    padding-right: 0.06em; /* room for italic terminal of "business" / similar */
+    padding-right: 0.18em; /* room for italic terminal of "business" / similar */
 }
 .hero-title .serif.italic {
     background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    /* Extra trailing space so the italic terminal of letters like "s" is not
+       clipped by the text-clip bounding box. */
+    padding-right: 0.12em;
+    margin-right: -0.04em;
 }
 
 .hero-sub {

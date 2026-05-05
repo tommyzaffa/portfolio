@@ -41,6 +41,8 @@
             reviews_sub: "Real feedback from the businesses I've worked with.",
             review_1_text: "Thomas reached out to me with a proposal for a website. Very wary after past negative experiences with “big names” in Ticino's communication scene, I let him develop his idea for my business. Now I can only say WOW! Beautiful work — I'm really happy with the result. Well done.",
             review_1_author: "— Alan, Ondus Tattoo (owner & founder)",
+            review_2_text: "I've known Tommy since he was a child. He's a professional and precise young man in his work, as well as in his personal integrity. He did a great job on our website — fast, quick and easy to read. We highly recommend him. Best wishes for his future. Kind regards.",
+            review_2_author: "— Fabio Guastalli, Pronto Pizza da Fabio (owner & founder)",
 
             contact_kicker: "Have a project? ",
             contact_kicker_2: "Let's talk.",
@@ -100,6 +102,8 @@
             reviews_sub: "Feedback reali dalle attività con cui ho lavorato.",
             review_1_text: "Thomas si è presentato a me proponendomi una soluzione per un sito web. Molto diffidente, viste esperienze negative passate con “grandi nomi” della comunicazione ticinese, gli ho permesso di sviluppare la sua idea per la mia attività. Ora posso solo dire WOW! Lavoro bellissimo, sono davvero contento del risultato. Bravo.",
             review_1_author: "— Alan, Ondus Tattoo (proprietario e fondatore)",
+            review_2_text: "Conosco Tommy fin da bambino. È un ragazzo professionale e preciso nel suo lavoro, così come nella correttezza personale. Ha fatto un bel lavoro per il nostro sito web — veloce, rapido e di facile lettura. Lo consigliamo vivamente. Auguri per il suo futuro. Distinti saluti.",
+            review_2_author: "— Fabio Guastalli, Pronto Pizza da Fabio (proprietario e fondatore)",
 
             contact_kicker: "Hai un progetto? ",
             contact_kicker_2: "Parliamone.",
@@ -159,6 +163,8 @@
             reviews_sub: "Retours réels des entreprises avec qui j'ai travaillé.",
             review_1_text: "Thomas est venu me voir en me proposant une solution pour un site web. Très méfiant après des expériences passées négatives avec de « grands noms » de la communication tessinoise, je l'ai laissé développer son idée pour mon activité. Aujourd'hui je peux seulement dire WOW ! Très beau travail, je suis vraiment content du résultat. Bravo.",
             review_1_author: "— Alan, Ondus Tattoo (propriétaire et fondateur)",
+            review_2_text: "Je connais Tommy depuis qu'il est enfant. C'est un garçon professionnel et précis dans son travail, comme dans sa rigueur personnelle. Il a fait un beau travail pour notre site web — rapide, fluide et facile à lire. Nous le recommandons vivement. Tous nos vœux pour son avenir. Cordialement.",
+            review_2_author: "— Fabio Guastalli, Pronto Pizza da Fabio (propriétaire et fondateur)",
 
             contact_kicker: "Un projet en tête ? ",
             contact_kicker_2: "Parlons-en.",
@@ -218,6 +224,8 @@
             reviews_sub: "Echte Rückmeldungen von Unternehmen, mit denen ich gearbeitet habe.",
             review_1_text: "Thomas kam mit einem Vorschlag für eine Website auf mich zu. Nach schlechten Erfahrungen mit „grossen Namen“ der Tessiner Kommunikationsbranche war ich sehr skeptisch — trotzdem habe ich ihn seine Idee für mein Geschäft umsetzen lassen. Heute kann ich nur sagen: WOW! Tolle Arbeit, ich bin wirklich zufrieden mit dem Ergebnis. Bravo.",
             review_1_author: "— Alan, Ondus Tattoo (Inhaber und Gründer)",
+            review_2_text: "Ich kenne Tommy schon seit seiner Kindheit. Er ist ein professioneller und sorgfältiger junger Mann in seiner Arbeit — und ebenso in seiner persönlichen Korrektheit. Er hat eine schöne Arbeit für unsere Website geleistet: schnell, flott und gut lesbar. Wir empfehlen ihn wärmstens. Alles Gute für seine Zukunft. Mit freundlichen Grüssen.",
+            review_2_author: "— Fabio Guastalli, Pronto Pizza da Fabio (Inhaber und Gründer)",
 
             contact_kicker: "Ein Projekt im Kopf? ",
             contact_kicker_2: "Reden wir.",
