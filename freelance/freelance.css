@@ -278,14 +278,15 @@ section + section { padding-top: 0; }
     font-family: var(--serif);
     font-weight: 400;
     font-size: clamp(2.6rem, 7vw + 0.5rem, 6.4rem);
-    line-height: 0.98;
+    line-height: 1.05;
     letter-spacing: -0.035em;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
     max-width: 1100px;
 }
 .hero-title .line {
     display: block;
-    overflow: hidden;
+    overflow: visible;
+    padding-right: 0.06em; /* room for italic terminal of "business" / similar */
 }
 .hero-title .serif.italic {
     background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 100%);
