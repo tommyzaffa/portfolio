@@ -196,6 +196,8 @@ a:link
     border-radius: 14px;
 }
 
+#popaci .icon { width: 18%; }
+
 .icon:hover
 {
     filter: grayscale(0%);
@@ -379,6 +381,8 @@ body::-webkit-scrollbar {
       width: 52px;
       max-width: 18vw;
     }
+
+    #popaci .icon { width: 62px; max-width: 22vw; }
 
     #apps_sites:hover .icon,
     #apps_sites:active .icon,
