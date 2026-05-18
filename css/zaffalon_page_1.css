@@ -55,7 +55,7 @@
   --bg-y-ipad-portrait-px: -100;
 
   --apps-right: 35%;
-  --apps-top: 40%;
+  --apps-top: 42%;
   --apps-rot: -1deg;
   --apps-scale: 1;
   --apps-svg-width: 140px;
@@ -222,6 +222,29 @@ p
 #jobs_stages .write-svg { width: var(--jobs-svg-width); height: auto; }
 #contact .write-svg { width: var(--contact-svg-width); height: auto; }
 #apps .write-svg { width: var(--apps-svg-width); height: auto; }
+
+/* LARGE DESKTOP / ULTRAWIDE
+   The background uses cover, so very wide screens scale the photo from
+   viewport width while the old vertical percentages scaled from height.
+   These vw-based anchors keep the handwritten SVGs tied to the photo;
+   the max offsets keep lower links reachable on ultrawide crops. */
+@media (min-width: 1800px) and (min-aspect-ratio: 1920/1279) {
+  :root {
+    --edu-scale: 1.48;
+    --music-scale: 1.48;
+    --shortfilms-scale: 1.48;
+    --jobs-scale: 1.48;
+    --contact-scale: 1.48;
+    --apps-scale: 1.48;
+  }
+
+  #education { top: min(32vw, calc(100vh - 405px)); }
+  #music { top: min(37.3vw, calc(100vh - 315px)); }
+  #short_films { top: min(41.5vw, calc(100vh - 280px)); }
+  #jobs_stages { top: min(27.5vw, calc(100vh - 480px)); }
+  #contact { top: min(51.5vw, calc(100vh - 180px)); }
+  #apps { top: min(23.8vw, calc(100vh - 555px)); }
+}
 
 hr {
     width: 100%;
