@@ -46,6 +46,52 @@
 }
 
 /* =========================================================
+   DESKTOP / TABLET LANDSCAPE NARROW VIEWPORTS
+   Keep the desktop composition fluid instead of forcing a
+   1400px-wide canvas that pushes the content panel off-screen.
+   ========================================================= */
+@media (min-width: 901px) and (max-width: 1399px){
+  body{
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  #menu,
+  #education_section,
+  #music_section,
+  #short_films_section,
+  #contact_section,
+  #jobs_section,
+  #apps_section{
+    width: clamp(320px, 26vw, 420px) !important;
+    box-sizing: border-box !important;
+    padding: clamp(24px, 3vw, 40px) !important;
+  }
+
+  #menu{
+    margin-right: auto !important;
+    justify-content: flex-start !important;
+  }
+
+  #education_section,
+  #music_section,
+  #short_films_section,
+  #contact_section,
+  #jobs_section,
+  #apps_section{
+    margin-left: auto !important;
+  }
+
+  .sheet-content{
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* =========================================================
    MOBILE: the actual surface sits on ::before. Paint paper there.
    ========================================================= */
 @media (max-width: 900px), (max-width: 767px) and (orientation: portrait),
@@ -143,6 +189,93 @@
   /* Drag handle pill: darker on the kraft surface */
   .sheet-handle::before{
     background: rgba(50, 30, 10, 0.45) !important;
+  }
+}
+
+/* Landscape tablets and narrow desktop windows should keep the desktop
+   side-panel composition. Phones in landscape stay on the compact rules. */
+@media (max-width: 900px) and (orientation: landscape) and (min-height: 500px){
+  body{
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: flex-start !important;
+  }
+
+  body::before{
+    background-position: center top !important;
+    background-size: cover !important;
+    scale: 1 !important;
+  }
+
+  #menu,
+  #education_section,
+  #music_section,
+  #short_films_section,
+  #contact_section,
+  #jobs_section,
+  #apps_section{
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    transition: none !important;
+    width: clamp(300px, 36vw, 340px) !important;
+    min-height: 100vh !important;
+    height: auto !important;
+    padding: 24px !important;
+    border-radius: 0 !important;
+    overflow-y: auto !important;
+    background:
+      repeating-linear-gradient(to bottom,
+        transparent 0,
+        transparent 31px,
+        rgba(90, 60, 20, 0.05) 31px,
+        rgba(90, 60, 20, 0.05) 32px),
+      var(--paper-bg) !important;
+    box-shadow: none !important;
+    outline: 0 !important;
+  }
+
+  #menu{
+    margin-right: auto !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+  }
+
+  #education_section,
+  #music_section,
+  #short_films_section,
+  #contact_section,
+  #jobs_section,
+  #apps_section{
+    margin-left: auto !important;
+  }
+
+  .sheet-handle{
+    display: none !important;
+  }
+
+  #menu .sheet-content,
+  #education_section .sheet-content,
+  #music_section .sheet-content,
+  #short_films_section .sheet-content,
+  #contact_section .sheet-content,
+  #jobs_section .sheet-content,
+  #apps_section .sheet-content{
+    width: 100% !important;
+    height: auto !important;
+    padding: 28px 0 !important;
+    overflow: visible !important;
+    background: transparent !important;
+    box-sizing: border-box !important;
   }
 }
 

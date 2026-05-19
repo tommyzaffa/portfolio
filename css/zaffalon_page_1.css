@@ -481,7 +481,7 @@ body::-webkit-scrollbar {
 /* END IPAD PORTRAIT LAYOUT */
 
 /* IPAD LANDSCAPE LAYOUT (HORIZONTAL) - DESKTOP-LIKE */
-@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+@media (min-width: 901px) and (max-width: 1366px) and (orientation: landscape) {
   :root{
     --menu-w: clamp(320px, 26vw, 420px);
   }
