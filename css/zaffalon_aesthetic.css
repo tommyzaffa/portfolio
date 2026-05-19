@@ -52,6 +52,7 @@
    ========================================================= */
 @media (min-width: 901px) and (max-width: 1399px){
   body{
+    --side-panel-w: clamp(320px, 26vw, 420px);
     min-width: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
@@ -68,6 +69,23 @@
     width: clamp(320px, 26vw, 420px) !important;
     box-sizing: border-box !important;
     padding: clamp(24px, 3vw, 40px) !important;
+  }
+
+  body:has(#menu)::before{
+    left: var(--side-panel-w) !important;
+    right: 0 !important;
+    background-position: right top !important;
+  }
+
+  body:has(#education_section)::before,
+  body:has(#music_section)::before,
+  body:has(#short_films_section)::before,
+  body:has(#contact_section)::before,
+  body:has(#jobs_section)::before,
+  body:has(#apps_section)::before{
+    left: 0 !important;
+    right: var(--side-panel-w) !important;
+    background-position: left top !important;
   }
 
   #menu{
@@ -196,6 +214,7 @@
    side-panel composition. Phones in landscape stay on the compact rules. */
 @media (max-width: 900px) and (orientation: landscape) and (min-height: 500px){
   body{
+    --side-panel-w: clamp(300px, 36vw, 340px);
     min-width: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
@@ -209,9 +228,25 @@
   }
 
   body::before{
-    background-position: center top !important;
     background-size: cover !important;
     scale: 1 !important;
+  }
+
+  body:has(#menu)::before{
+    left: var(--side-panel-w) !important;
+    right: 0 !important;
+    background-position: right top !important;
+  }
+
+  body:has(#education_section)::before,
+  body:has(#music_section)::before,
+  body:has(#short_films_section)::before,
+  body:has(#contact_section)::before,
+  body:has(#jobs_section)::before,
+  body:has(#apps_section)::before{
+    left: 0 !important;
+    right: var(--side-panel-w) !important;
+    background-position: left top !important;
   }
 
   #menu,
