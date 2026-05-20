@@ -713,7 +713,7 @@ html, body{
   }
 
   body::after{
-    content: "Ruota il dispositivo\Ain verticale";
+    content: "Rotate your device\Ato portrait mode";
     position: fixed;
     inset: 0;
     z-index: 2147483647;
