@@ -748,3 +748,48 @@ section + section { padding-top: 0; }
     }
     .reveal { opacity: 1; transform: none; }
 }
+
+/* ===== MOBILE / IPAD ORIENTATION GUARD ===== */
+@media screen and (orientation: landscape) and (hover: none) and (pointer: coarse) and (max-width: 1366px),
+       screen and (orientation: landscape) and (any-pointer: coarse) and (max-width: 1366px) and (max-height: 1024px) {
+    html,
+    body {
+        width: 100% !important;
+        min-width: 0 !important;
+        height: 100% !important;
+        min-height: 100dvh !important;
+        overflow: hidden !important;
+        background:
+            radial-gradient(circle at 50% 20%, rgba(255, 180, 100, 0.18), transparent 42%),
+            var(--bg) !important;
+    }
+
+    body > * {
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+
+    body::after {
+        content: "Ruota il dispositivo\Ain verticale";
+        position: fixed;
+        inset: 0;
+        z-index: 2147483647;
+        display: grid;
+        place-items: center;
+        padding: max(28px, env(safe-area-inset-top)) max(28px, env(safe-area-inset-right)) max(28px, env(safe-area-inset-bottom)) max(28px, env(safe-area-inset-left));
+        box-sizing: border-box;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        background:
+            radial-gradient(circle at 50% 20%, rgba(255, 180, 100, 0.18), transparent 42%),
+            var(--bg);
+        color: var(--text);
+        font-family: var(--serif);
+        font-size: clamp(1.45rem, 4.8vw, 2.8rem);
+        font-weight: 700;
+        line-height: 1.12;
+        text-align: center;
+        white-space: pre-line;
+        letter-spacing: 0;
+    }
+}
