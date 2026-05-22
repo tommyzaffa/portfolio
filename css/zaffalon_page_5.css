@@ -177,6 +177,23 @@ hr {
     filter: grayscale(0%);
     transform: scale(1.2);
 }
+
+.icon-email
+{
+    width: 16.5%;
+}
+
+.icon-telegram
+{
+    border-radius: 12%;
+    width: 14%;
+}
+
+.icon-linkedin
+{
+    border-radius: 12%;
+    width: 13.5%;
+}
 /* END OF ICONS */
 
 /* SCROLLBAR */
@@ -350,6 +367,18 @@ body::-webkit-scrollbar {
     .icon, .icon_lilu, .icon_cisa {
       width: 56px;
       max-width: 20vw;
+    }
+
+    .icon-email {
+      width: 59px;
+    }
+
+    .icon-telegram {
+      width: 54px;
+    }
+
+    .icon-linkedin {
+      width: 53px;
     }
   
     .icon_lilu, .icon_cisa {
