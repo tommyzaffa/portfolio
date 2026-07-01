@@ -1,17 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <!-- HEADER -->
     <head>
+        <meta charset="UTF-8">
         <title>Apps & Websites - Thomas Zaffalon</title>
 
-        <meta name="description" content="Apps and websites developed by Thomas Zaffalon, including WeathAff (a PWA weather app), TurnTale (an AI-driven multiplayer RPG), Echo Maze (a browser metroidvania game), and Merge Film Festival (a Swiss audiovisual festival portal).">
+        <meta name="description" content="Apps and websites developed by Thomas Zaffalon, including Keyo Tattoo Studio, Ondus Tattoo, Samuel Rhawi boutique, Merge Film Festival, PoPaCi, Pronto Pizza da Fabio, Echo Maze (browser game), TurnTale and WeathAff (a PWA weather app).">
 
         <meta name="author" content="Thomas Zaffalon">
-        <meta name="keywords" content="Thomas Zaffalon apps, WeathAff, TurnTale, Echo Maze, metroidvania, browser game, Merge Film Festival, PWA, web development, portfolio">
+        <meta name="keywords" content="Thomas Zaffalon apps, Keyo Tattoo Studio, Ondus Tattoo, Samuel Rhawi, Merge Film Festival, PoPaCi, Pronto Pizza da Fabio, Echo Maze, TurnTale, WeathAff, web development, custom websites, Lugano, portfolio">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="theme-color" content="#c9a270">
-        <meta charset="UTF-8">
+        <meta name="robots" content="index, follow, max-image-preview:large">
+        <link rel="canonical" href="https://www.tommyzaffa.com/apps/">
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Thomas Zaffalon">
+        <meta property="og:title" content="Apps & Websites - Thomas Zaffalon">
+        <meta property="og:description" content="A collection of apps and websites built by Thomas Zaffalon for real businesses and personal projects.">
+        <meta property="og:url" content="https://www.tommyzaffa.com/apps/">
+        <meta property="og:image" content="https://www.tommyzaffa.com/images/favicon.png">
+        <meta property="og:locale" content="en">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Apps & Websites - Thomas Zaffalon">
+        <meta name="twitter:description" content="A collection of apps and websites built by Thomas Zaffalon for real businesses and personal projects.">
+        <meta name="twitter:image" content="https://www.tommyzaffa.com/images/favicon.png">
+
+        <!-- Structured data -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.tommyzaffa.com/"},
+                {"@type": "ListItem", "position": 2, "name": "Apps & Websites", "item": "https://www.tommyzaffa.com/apps/"}
+              ]
+            },
+            {
+              "@type": "CollectionPage",
+              "name": "Apps & Websites - Thomas Zaffalon",
+              "url": "https://www.tommyzaffa.com/apps/",
+              "inLanguage": "en",
+              "about": {"@type": "Person", "name": "Thomas Zaffalon", "url": "https://www.tommyzaffa.com/"},
+              "mainEntity": {
+                "@type": "ItemList",
+                "itemListOrder": "https://schema.org/ItemListOrderDescending",
+                "itemListElement": [
+                  {"@type": "ListItem", "position": 1, "item": {"@type": "WebSite", "name": "Keyo Tattoo Studio", "url": "https://keyotattoostudio.ch", "creator": {"@type": "Person", "name": "Thomas Zaffalon"}}},
+                  {"@type": "ListItem", "position": 2, "item": {"@type": "VideoGame", "name": "Echo Maze", "url": "https://www.echomaze.quest", "applicationCategory": "Game", "author": {"@type": "Person", "name": "Thomas Zaffalon"}}},
+                  {"@type": "ListItem", "position": 3, "item": {"@type": "WebSite", "name": "Samuel Rhawi By Nursel", "url": "https://samuelrhawibynursel.com", "creator": {"@type": "Person", "name": "Thomas Zaffalon"}}},
+                  {"@type": "ListItem", "position": 4, "item": {"@type": "WebSite", "name": "Ondus Tattoo", "url": "https://www.ondustattoo.ink", "creator": {"@type": "Person", "name": "Thomas Zaffalon"}}},
+                  {"@type": "ListItem", "position": 5, "item": {"@type": "WebSite", "name": "Merge Film Festival", "url": "https://www.mergefestival.ch", "creator": {"@type": "Person", "name": "Thomas Zaffalon"}}},
+                  {"@type": "ListItem", "position": 6, "item": {"@type": "WebSite", "name": "PoPaCi", "url": "https://www.popaci.com", "creator": {"@type": "Person", "name": "Thomas Zaffalon"}}},
+                  {"@type": "ListItem", "position": 7, "item": {"@type": "WebSite", "name": "Pronto Pizza da Fabio", "url": "https://www.ristoranteppdafabio.it", "creator": {"@type": "Person", "name": "Thomas Zaffalon"}}},
+                  {"@type": "ListItem", "position": 8, "item": {"@type": "MobileApplication", "name": "TurnTale", "url": "https://turntale-indol.vercel.app", "applicationCategory": "GameApplication", "author": {"@type": "Person", "name": "Thomas Zaffalon"}}},
+                  {"@type": "ListItem", "position": 9, "item": {"@type": "WebApplication", "name": "WeathAff", "url": "https://tommyzaffa.github.io/weathaff/", "applicationCategory": "Weather", "author": {"@type": "Person", "name": "Thomas Zaffalon"}}}
+                ]
+              }
+            }
+          ]
+        }
+        </script>
 
         <!-- Favicon -->
         <link rel="icon" type="image/png" href="/images/favicon.png">
@@ -35,73 +90,44 @@
                 <br>
             </div>
             <hr><br>
-            <!-- WEATHAFF SECTION -->
-            <div id="weathaff">
-                <h2>WeathAff</h2> <br>
-                <span class="badge">APP</span>
-                <p>
-                    WeathAff is a weather app built as a Progressive Web App — usable directly from the browser and installable on your smartphone like a native app. I made it for myself as my first dive into the world of app development. Simple, fast, and personal.
-                </p>
-                <!-- ICON -->
-                <a href="https://tommyzaffa.github.io/weathaff/">
-                    <img src="../images/weathaff.png" alt="WeathAff" class="icon">
-                </a>
-                <br>
-            </div>
-            <hr>
-            <!-- TURNTALE SECTION -->
-            <div id="turntale">
-                <h2>TurnTale</h2> <br>
-                <span class="badge">APP</span>
-                <p>
-                    TurnTale is a narrative game that breaks the mold of typical mobile games: it has real objectives — no endless grind, no pointless loops. It's built for asynchronous multiplayer, so you and your friends share the same story without ever needing to be online at the same time. Take your turn when you want, pick it back up later. Still in beta — grab some friends and give it a go.
-                </p>
-                <!-- ICON -->
-                <a href="https://turntale-indol.vercel.app">
-                    <img src="../images/turntale.jpg" alt="TurnTale" class="icon">
-                </a>
-                <br>
-            </div>
-            <hr>
-            
-            <!-- PRONTO PIZZA DA FABIO SECTION -->
-            <div id="pronto_pizza_da_fabio">
-                <h2>Pronto Pizza da Fabio</h2> <br>
+            <!-- KEYO TATTOO STUDIO -->
+            <div id="keyo_tattoo">
+                <h2>Keyo Tattoo Studio</h2> <br>
                 <span class="badge">WEBSITE</span>
                 <p>
-                    This was my first published website for a real business — a restaurant and pizzeria that had been operating for years but had no online presence yet. It gave me the chance to put myself to the test by building and launching a site for an already established, active business.
+                    Keyo Tattoo Studio was a more complex but truly fascinating project. The owner wanted to preserve the studio's established brand identity while adopting a style very close to that of a New York tattoo studio's website. In the end, we achieved exactly the result we were hoping for, and he was thrilled with it.
                 </p>
                 <!-- ICON -->
-                <a href="https://www.ristoranteppdafabio.it">
-                    <img src="../images/prontopizza.png" alt="Pronto Pizza da Fabio" class="icon">
+                <a href="https://keyotattoostudio.ch">
+                    <img src="../images/keyo.jpg" alt="Keyo Tattoo Studio" class="icon">
                 </a>
                 <br>
             </div>
             <hr>
-            <!-- POPACI -->
-            <div id="popaci">
-                <h2>PoPaCi</h2> <br>
+            <!-- ECHO MAZE SECTION -->
+            <div id="echo_maze">
+                <h2>Echo Maze</h2> <br>
                 <span class="badge">WEBSITE</span>
                 <p>
-                    I created the website for PoPaCi, a company founded by my former colleagues from film school. Following this collaboration, I joined the company as a System Administrator, managing its IT infrastructure and digital presence — including the development of their website and other technical aspects. The site launched in May 2026.
+                    Echo Maze is my first single-player metroidvania — an idea I had been carrying around for a while and finally brought to life. It runs straight in the browser as a website, with no downloads, no loading screens, and free for everyone. The gameplay is fast, dynamic, and engaging, designed to pull you in from the very first move.
                 </p>
                 <!-- ICON -->
-                <a href="https://www.popaci.com">
-                    <img src="../images/popaci.jpg" alt="PoPaCi" class="icon">
+                <a href="https://www.echomaze.quest">
+                    <img src="../images/echo_maze.svg" alt="Echo Maze" class="icon">
                 </a>
                 <br>
             </div>
             <hr>
-            <!-- MERGE FILM FESTIVAL SECTION -->
-            <div id="merge_film_festival">
-                <h2>Merge Film Festival</h2> <br>
+            <!-- SAMUEL RHAWI BY NURSEL -->
+            <div id="samuel_rhawi">
+                <h2>Samuel Rhawi By Nursel</h2> <br>
                 <span class="badge">WEBSITE</span>
                 <p>
-                    Merge Film Festival is the first Swiss festival dedicated to audiovisual works created with artificial intelligence. Founded by my colleagues from CISA — who started the company PoPaCi — they asked me to build their digital home: a minimal, elegant, and fluid portal where visitors can discover what the festival is about, how it works, and what to expect. The site launched in May 2026.
+                    This was my first website for a more established fashion business: Samuel Rhawi, a recognized leather and luxury clothing brand with an important presence in Istanbul. The goal was to create a refined online identity for the Lugano boutique, presenting Nursel's showroom as the local Swiss home of the maison while keeping a clear connection to the brand's wider story.
                 </p>
                 <!-- ICON -->
-                <a href="https://www.mergefestival.ch">
-                    <img src="../images/mff.jpg" alt="Merge Film Festival" class="icon">
+                <a href="https://samuelrhawibynursel.com">
+                    <img src="../images/samuel-rhawi.webp" alt="Samuel Rhawi By Nursel" class="icon">
                 </a>
                 <br>
             </div>
@@ -122,30 +148,72 @@ By listening closely to the owner’s style and intentions, I translated their i
                 <br>
             </div>
             <hr>
-            <!-- SAMUEL RHAWI BY NURSEL -->
-            <div id="samuel_rhawi">
-                <h2>Samuel Rhawi By Nursel</h2> <br>
+            <!-- MERGE FILM FESTIVAL SECTION -->
+            <div id="merge_film_festival">
+                <h2>Merge Film Festival</h2> <br>
                 <span class="badge">WEBSITE</span>
                 <p>
-                    This was my first website for a more established fashion business: Samuel Rhawi, a recognized leather and luxury clothing brand with an important presence in Istanbul. The goal was to create a refined online identity for the Lugano boutique, presenting Nursel's showroom as the local Swiss home of the maison while keeping a clear connection to the brand's wider story.
+                    Merge Film Festival is the first Swiss festival dedicated to audiovisual works created with artificial intelligence. Founded by my colleagues from CISA — who started the company PoPaCi — they asked me to build their digital home: a minimal, elegant, and fluid portal where visitors can discover what the festival is about, how it works, and what to expect. The site launched in May 2026.
                 </p>
                 <!-- ICON -->
-                <a href="https://samuelrhawibynursel.com">
-                    <img src="../images/samuel-rhawi.webp" alt="Samuel Rhawi By Nursel" class="icon">
+                <a href="https://www.mergefestival.ch">
+                    <img src="../images/mff.jpg" alt="Merge Film Festival" class="icon">
                 </a>
                 <br>
             </div>
             <hr>
-            <!-- ECHO MAZE SECTION -->
-            <div id="echo_maze">
-                <h2>Echo Maze</h2> <br>
+            <!-- POPACI -->
+            <div id="popaci">
+                <h2>PoPaCi</h2> <br>
                 <span class="badge">WEBSITE</span>
                 <p>
-                    Echo Maze is my first single-player metroidvania — an idea I had been carrying around for a while and finally brought to life. It runs straight in the browser as a website, with no downloads, no loading screens, and free for everyone. The gameplay is fast, dynamic, and engaging, designed to pull you in from the very first move.
+                    I created the website for PoPaCi, a company founded by my former colleagues from film school. Following this collaboration, I joined the company as a System Administrator, managing its IT infrastructure and digital presence — including the development of their website and other technical aspects. The site launched in May 2026.
                 </p>
                 <!-- ICON -->
-                <a href="https://www.echomaze.quest">
-                    <img src="../images/echo_maze.svg" alt="Echo Maze" class="icon">
+                <a href="https://www.popaci.com">
+                    <img src="../images/popaci.jpg" alt="PoPaCi" class="icon">
+                </a>
+                <br>
+            </div>
+            <hr>
+            <!-- PRONTO PIZZA DA FABIO SECTION -->
+            <div id="pronto_pizza_da_fabio">
+                <h2>Pronto Pizza da Fabio</h2> <br>
+                <span class="badge">WEBSITE</span>
+                <p>
+                    This was my first published website for a real business — a restaurant and pizzeria that had been operating for years but had no online presence yet. It gave me the chance to put myself to the test by building and launching a site for an already established, active business.
+                </p>
+                <!-- ICON -->
+                <a href="https://www.ristoranteppdafabio.it">
+                    <img src="../images/prontopizza.png" alt="Pronto Pizza da Fabio" class="icon">
+                </a>
+                <br>
+            </div>
+            <hr>
+            <!-- TURNTALE SECTION -->
+            <div id="turntale">
+                <h2>TurnTale</h2> <br>
+                <span class="badge">APP</span>
+                <p>
+                    TurnTale is a narrative game that breaks the mold of typical mobile games: it has real objectives — no endless grind, no pointless loops. It's built for asynchronous multiplayer, so you and your friends share the same story without ever needing to be online at the same time. Take your turn when you want, pick it back up later. Still in beta — grab some friends and give it a go.
+                </p>
+                <!-- ICON -->
+                <a href="https://turntale-indol.vercel.app">
+                    <img src="../images/turntale.jpg" alt="TurnTale" class="icon">
+                </a>
+                <br>
+            </div>
+            <hr>
+            <!-- WEATHAFF SECTION -->
+            <div id="weathaff">
+                <h2>WeathAff</h2> <br>
+                <span class="badge">APP</span>
+                <p>
+                    WeathAff is a weather app built as a Progressive Web App — usable directly from the browser and installable on your smartphone like a native app. I made it for myself as my first dive into the world of app development. Simple, fast, and personal.
+                </p>
+                <!-- ICON -->
+                <a href="https://tommyzaffa.github.io/weathaff/">
+                    <img src="../images/weathaff.png" alt="WeathAff" class="icon">
                 </a>
                 <br>
             </div>
