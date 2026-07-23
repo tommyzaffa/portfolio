@@ -179,6 +179,24 @@ a:link
     transition: color 0.3s ease, border-color 0.3s ease;
 }
 
+#keyo_tattoo:hover h2,
+#keyo_tattoo:hover p,
+#keyo_tattoo:hover .badge
+{
+    color: orange;
+    border-color: orange;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+#popaci_studio:hover h2,
+#popaci_studio:hover p,
+#popaci_studio:hover .badge
+{
+    color: orange;
+    border-color: orange;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
 #home:hover h3
 {
     color: orange;
@@ -416,6 +434,14 @@ body::-webkit-scrollbar {
     #echo_maze:active .icon,
     #echo_maze:focus-within .icon,
 
+    #keyo_tattoo:hover .icon,
+    #keyo_tattoo:active .icon,
+    #keyo_tattoo:focus-within .icon,
+
+    #popaci_studio:hover .icon,
+    #popaci_studio:active .icon,
+    #popaci_studio:focus-within .icon,
+
     #home:hover .icon,
     #home:active .icon,
     #home:focus-within .icon {
@@ -423,7 +449,7 @@ body::-webkit-scrollbar {
       transform: scale(1.1);
     }
 
-    #apps_sites, #weathaff, #turntale, #pronto_pizza_da_fabio, #popaci, #merge_film_festival, #ondus_tattoo, #samuel_rhawi, #echo_maze, #home {
+    #apps_sites, #keyo_tattoo, #popaci_studio, #weathaff, #turntale, #pronto_pizza_da_fabio, #popaci, #merge_film_festival, #ondus_tattoo, #samuel_rhawi, #echo_maze, #home {
       -webkit-tap-highlight-color: transparent;
     }
 

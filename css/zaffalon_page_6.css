@@ -161,7 +161,31 @@ a:link
     transition: color 0.3s ease;
 }
 
-#spring:hover p 
+#spring:hover p
+{
+    color: orange;
+    transition: color 0.3s ease;
+}
+
+#popaci:hover h2
+{
+    color: orange;
+    transition: color 0.3s ease;
+}
+
+#popaci:hover p
+{
+    color: orange;
+    transition: color 0.3s ease;
+}
+
+#merge_cto:hover h2
+{
+    color: orange;
+    transition: color 0.3s ease;
+}
+
+#merge_cto:hover p
 {
     color: orange;
     transition: color 0.3s ease;
@@ -373,6 +397,14 @@ body::-webkit-scrollbar {
     #spring:active .icon,
     #spring:focus-within .icon,
 
+    #popaci:hover .icon,
+    #popaci:active .icon,
+    #popaci:focus-within .icon,
+
+    #merge_cto:hover .icon,
+    #merge_cto:active .icon,
+    #merge_cto:focus-within .icon,
+
     #home:hover .icon,
     #home:active .icon,
     #home:focus-within .icon {
@@ -380,7 +412,7 @@ body::-webkit-scrollbar {
       transform: scale(1.1);
     }
 
-    #jobs_stages, #mini_cuchi, #etnic, #jazzascona, #lff, #spring, #home {
+    #jobs_stages, #popaci, #merge_cto, #mini_cuchi, #etnic, #jazzascona, #lff, #spring, #home {
       -webkit-tap-highlight-color: transparent;
     }
   
