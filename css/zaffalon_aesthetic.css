@@ -419,6 +419,7 @@ hr{
 #samuel_rhawi > h2,
 #keyo_tattoo > h2,
 #popaci_studio > h2,
+#la_brace > h2,
 #merge_cto > h2,
 #echo_maze > h2{
   position: relative;
@@ -451,6 +452,7 @@ hr{
 #samuel_rhawi > h2::before,
 #keyo_tattoo > h2::before,
 #popaci_studio > h2::before,
+#la_brace > h2::before,
 #merge_cto > h2::before,
 #echo_maze > h2::before{
   content: "";
@@ -564,6 +566,10 @@ hr{
 #popaci_studio > h2::before{
   background: repeating-linear-gradient(45deg, rgba(221, 136, 136, 0.55) 0 8px, rgba(221, 136, 136, 0.38) 8px 16px);
   transform: rotate(-1.2deg);
+}
+#la_brace > h2::before{
+  background: repeating-linear-gradient(45deg, rgba(249, 179, 90, 0.55) 0 8px, rgba(249, 179, 90, 0.35) 8px 16px);
+  transform: rotate(1.5deg);
 }
 #merge_cto > h2::before{
   background: repeating-linear-gradient(45deg, rgba(249, 179, 90, 0.55) 0 8px, rgba(249, 179, 90, 0.35) 8px 16px);
