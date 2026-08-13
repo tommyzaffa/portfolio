@@ -142,17 +142,7 @@ p
 }
 
 /* MOUSE EVENT OF LEFT SIDE OF THE PAGE */
-#hello:hover h3
-{
-    color: orange;
-    transition: color 0.3s ease;
-}
 
-#hello:hover p
-{
-    color: orange;
-    transition: color 0.3s ease;
-}
 /* END OF LEFT SIDE OF THE PAGE */
 
 /* RIGHT SIDE OF THE PAGE */

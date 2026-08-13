@@ -41,7 +41,6 @@ a:link
 }
 /* END OF GENERAL SETTINGS */
 
-
 /* RIGHT SIDE OF THE PAGE SETTINGS */
 #contact_section
 {
@@ -120,17 +119,6 @@ hr {
 /* END OF RIGHT SIDE OF THE PAGE SETTINGS */
 
 /* MOUSE EVENTS */
-#contact:hover h1
-{
-    color: orange;
-    transition: color 0.3s ease;
-}
-
-#contact:hover p
-{
-    color: orange;
-    transition: color 0.3s ease;
-}
 
 #email:hover
 {
@@ -156,11 +144,6 @@ hr {
     transition: font-size 0.5s ease;
 }
 
-#home:hover h3
-{
-    color: orange;
-    transition: color 0.3s ease;
-}
 /* MOUSE EVENTS */
 
 /* ICONS */

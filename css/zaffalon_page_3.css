@@ -94,71 +94,7 @@ p
 /* END OF RIGHT SIDE OF THE PAGE SETTINGS */
 
 /* MOUSE EVENTS */
-#music:hover h1 
-{
-    color: orange;
-    transition: color 0.3s ease;
-}
 
-#music:hover p 
-{
-    color: orange;
-    transition: color 0.3s ease;
-}
-
-#mcjoes:hover h2 
-{
-    color: orange;
-    transition: color 0.3s ease;
-}
-
-#mcjoes:hover p 
-{
-    color: orange;
-    transition: color 0.3s ease;
-}
-
-#zaffa:hover h2 
-{
-    color: orange;
-    transition: color 0.3s ease;
-}
-
-#zaffa:hover p 
-{
-    color: orange;
-    transition: color 0.3s ease;
-}
-
-#hot-dogs:hover h2 
-{
-    color: orange;
-    transition: color 0.3s ease;
-}
-
-#hot-dogs:hover p 
-{
-    color: orange;
-    transition: color 0.3s ease;
-}
-
-#spiked_flower:hover h2 
-{
-    color: orange;
-    transition: color 0.3s ease;
-}
-
-#spiked_flower:hover p 
-{
-    color: orange;
-    transition: color 0.3s ease;
-}
-
-#home:hover h3
-{
-    color: orange;
-    transition: color 0.3s ease;
-}
 /* END OF MOUSE EVENTS */
 
 /* ICONS */

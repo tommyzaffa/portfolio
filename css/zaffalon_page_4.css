@@ -94,47 +94,7 @@ p
 /* END OF RIGHT SIDE OF THE PAGE SETTINGS */
 
 /* MOUSE EVENTS */
-#short_films:hover h1 
-{
-    color: orange;
-    transition: color 0.3s ease;
-}
 
-#short_films:hover p 
-{
-    color: orange;
-    transition: color 0.3s ease;
-}
-
-#io_lui_e_l_altro:hover h2 
-{
-    color: orange;
-    transition: color 0.3s ease;
-}
-
-#io_lui_e_l_altro:hover p 
-{
-    color: orange;
-    transition: color 0.3s ease;
-}
-
-#cisa:hover h2 
-{
-    color: orange;
-    transition: color 0.3s ease;
-}
-
-#cisa:hover p 
-{
-    color: orange;
-    transition: color 0.3s ease;
-}
-
-#home:hover h3
-{
-    color: orange;
-    transition: color 0.3s ease;
-}
 /* END OF MOUSE EVENTS */
 
 /* ICONS */

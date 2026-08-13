@@ -662,10 +662,6 @@ hr{
 /* =========================================================
    9. HELLO hover color tuned to paper palette
    ========================================================= */
-#hello:hover h3,
-#hello:hover p{
-  color: #d99040 !important;
-}
 
 /* =========================================================
    10. APPS ICONS - force block so they center on a new line
