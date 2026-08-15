@@ -109,6 +109,7 @@ a:link
 }
 
 #popaci .icon { width: 18%; }
+#pasta_lovers .icon { width: 21%; }
 
 .icon:hover
 {
@@ -295,6 +296,7 @@ body::-webkit-scrollbar {
     }
 
     #popaci .icon { width: 62px; max-width: 22vw; }
+    #pasta_lovers .icon { width: 76px; max-width: 27vw; }
 
     #apps_sites:hover .icon,
     #apps_sites:active .icon,
@@ -340,6 +342,10 @@ body::-webkit-scrollbar {
     #la_brace:active .icon,
     #la_brace:focus-within .icon,
 
+    #pasta_lovers:hover .icon,
+    #pasta_lovers:active .icon,
+    #pasta_lovers:focus-within .icon,
+
     #home:hover .icon,
     #home:active .icon,
     #home:focus-within .icon {
@@ -347,7 +353,7 @@ body::-webkit-scrollbar {
       transform: scale(1.1);
     }
 
-    #apps_sites, #la_brace, #keyo_tattoo, #popaci_studio, #weathaff, #turntale, #pronto_pizza_da_fabio, #popaci, #merge_film_festival, #ondus_tattoo, #samuel_rhawi, #echo_maze, #home {
+    #apps_sites, #pasta_lovers, #la_brace, #keyo_tattoo, #popaci_studio, #weathaff, #turntale, #pronto_pizza_da_fabio, #popaci, #merge_film_festival, #ondus_tattoo, #samuel_rhawi, #echo_maze, #home {
       -webkit-tap-highlight-color: transparent;
     }
 
