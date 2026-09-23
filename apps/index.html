@@ -1,279 +1,448 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- HEADER -->
-    <head>
-        <meta charset="UTF-8">
-        <title>Apps & Websites - Thomas Zaffalon</title>
+<head>
+  <meta charset="UTF-8">
+  <title>Apps &amp; Websites — Thomas Zaffalon</title>
 
-        <meta name="description" content="Apps and websites developed by Thomas Zaffalon, including Pasta Lovers in Australia, La Brace steakhouse, Keyo Tattoo Studio, Ondus Tattoo, Samuel Rhawi boutique, Merge Film Festival, PoPaCi, PoPaCi Studio (a full-stack management platform), Pronto Pizza da Fabio, Echo Maze (browser game), TurnTale and WeathAff (a PWA weather app).">
+  <meta name="description" content="Websites and apps built by Thomas Zaffalon: La Brace, Keyo Tattoo Studio, Samuel Rhawi, Merge Film Festival and PoPaCi Studio. Hand-coded in Lugano.">
+  <meta name="author" content="Thomas Zaffalon">
+  <meta name="keywords" content="Thomas Zaffalon apps, Pasta Lovers, La Brace, Keyo Tattoo Studio, Ondus Tattoo, Samuel Rhawi, Merge Film Festival, PoPaCi, PoPaCi Studio, management platform, Next.js, React, Supabase, full-stack, Pronto Pizza da Fabio, Echo Maze, TurnTale, WeathAff, web development, custom websites, Lugano, portfolio">
 
-        <meta name="author" content="Thomas Zaffalon">
-        <meta name="keywords" content="Thomas Zaffalon apps, Pasta Lovers, La Brace, Keyo Tattoo Studio, Ondus Tattoo, Samuel Rhawi, Merge Film Festival, PoPaCi, PoPaCi Studio, management platform, Next.js, React, Supabase, full-stack, Pronto Pizza da Fabio, Echo Maze, TurnTale, WeathAff, web development, custom websites, Lugano, portfolio">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0a0b">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.tommyzaffa.com/apps/">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="theme-color" content="#c9a270">
-        <meta name="robots" content="index, follow, max-image-preview:large">
-        <link rel="canonical" href="https://www.tommyzaffa.com/apps/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Thomas Zaffalon">
+  <meta property="og:title" content="Apps &amp; Websites — Thomas Zaffalon">
+  <meta property="og:description" content="A collection of apps and websites built by Thomas Zaffalon for real businesses and personal projects.">
+  <meta property="og:url" content="https://www.tommyzaffa.com/apps/">
+  <meta property="og:image" content="https://www.tommyzaffa.com/images/og/apps.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en">
 
-        <!-- Open Graph -->
-        <meta property="og:type" content="website">
-        <meta property="og:site_name" content="Thomas Zaffalon">
-        <meta property="og:title" content="Apps & Websites - Thomas Zaffalon">
-        <meta property="og:description" content="A collection of apps and websites built by Thomas Zaffalon for real businesses and personal projects.">
-        <meta property="og:url" content="https://www.tommyzaffa.com/apps/">
-        <meta property="og:image" content="https://www.tommyzaffa.com/images/favicon.png">
-        <meta property="og:locale" content="en">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Apps &amp; Websites — Thomas Zaffalon">
+  <meta name="twitter:description" content="A collection of apps and websites built by Thomas Zaffalon for real businesses and personal projects.">
+  <meta name="twitter:image" content="https://www.tommyzaffa.com/images/og/apps.jpg">
 
-        <!-- Twitter Card -->
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="Apps & Websites - Thomas Zaffalon">
-        <meta name="twitter:description" content="A collection of apps and websites built by Thomas Zaffalon for real businesses and personal projects.">
-        <meta name="twitter:image" content="https://www.tommyzaffa.com/images/favicon.png">
-
-        <!-- Structured data -->
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.tommyzaffa.com/"},
-                {"@type": "ListItem", "position": 2, "name": "Apps & Websites", "item": "https://www.tommyzaffa.com/apps/"}
-              ]
-            },
-            {
-              "@type": "CollectionPage",
-              "name": "Apps & Websites - Thomas Zaffalon",
-              "url": "https://www.tommyzaffa.com/apps/",
-              "inLanguage": "en",
-              "about": {"@type": "Person", "name": "Thomas Zaffalon", "url": "https://www.tommyzaffa.com/"},
-              "mainEntity": {
-                "@type": "ItemList",
-                "itemListOrder": "https://schema.org/ItemListOrderDescending",
-                "itemListElement": [
-                  {"@type": "ListItem", "position": 1, "item": {"@type": "WebSite", "name": "Pasta Lovers", "url": "https://pastalovers.com.au", "creator": {"@type": "Person", "name": "Thomas Zaffalon"}}},
-                  {"@type": "ListItem", "position": 2, "item": {"@type": "WebSite", "name": "La Brace", "url": "https://labrace.ch", "creator": {"@type": "Person", "name": "Thomas Zaffalon"}}},
-                  {"@type": "ListItem", "position": 3, "item": {"@type": "WebApplication", "name": "PoPaCi Studio", "url": "https://studio.popaci.com", "applicationCategory": "BusinessApplication", "author": {"@type": "Person", "name": "Thomas Zaffalon"}}},
-                  {"@type": "ListItem", "position": 4, "item": {"@type": "WebSite", "name": "Keyo Tattoo Studio", "url": "https://keyotattoostudio.ch", "creator": {"@type": "Person", "name": "Thomas Zaffalon"}}},
-                  {"@type": "ListItem", "position": 5, "item": {"@type": "VideoGame", "name": "Echo Maze", "url": "https://www.echomaze.quest", "applicationCategory": "Game", "author": {"@type": "Person", "name": "Thomas Zaffalon"}}},
-                  {"@type": "ListItem", "position": 6, "item": {"@type": "WebSite", "name": "Samuel Rhawi By Nursel", "url": "https://samuelrhawibynursel.com", "creator": {"@type": "Person", "name": "Thomas Zaffalon"}}},
-                  {"@type": "ListItem", "position": 7, "item": {"@type": "WebSite", "name": "Ondus Tattoo", "url": "https://www.ondustattoo.ink", "creator": {"@type": "Person", "name": "Thomas Zaffalon"}}},
-                  {"@type": "ListItem", "position": 8, "item": {"@type": "WebSite", "name": "Merge Film Festival", "url": "https://www.mergefestival.ch", "creator": {"@type": "Person", "name": "Thomas Zaffalon"}}},
-                  {"@type": "ListItem", "position": 9, "item": {"@type": "WebSite", "name": "PoPaCi", "url": "https://www.popaci.com", "creator": {"@type": "Person", "name": "Thomas Zaffalon"}}},
-                  {"@type": "ListItem", "position": 10, "item": {"@type": "WebSite", "name": "Pronto Pizza da Fabio", "url": "https://www.ristoranteppdafabio.it", "creator": {"@type": "Person", "name": "Thomas Zaffalon"}}},
-                  {"@type": "ListItem", "position": 11, "item": {"@type": "MobileApplication", "name": "TurnTale", "url": "https://turntale-indol.vercel.app", "applicationCategory": "GameApplication", "author": {"@type": "Person", "name": "Thomas Zaffalon"}}},
-                  {"@type": "ListItem", "position": 12, "item": {"@type": "WebApplication", "name": "WeathAff", "url": "https://tommyzaffa.github.io/weathaff/", "applicationCategory": "Weather", "author": {"@type": "Person", "name": "Thomas Zaffalon"}}}
-                ]
-              }
-            }
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.tommyzaffa.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Apps & Websites", "item": "https://www.tommyzaffa.com/apps/"}
+        ]
+      },
+      {
+        "@type": "CollectionPage",
+        "name": "Apps & Websites - Thomas Zaffalon",
+        "url": "https://www.tommyzaffa.com/apps/",
+        "inLanguage": "en",
+        "about": {"@type": "Person", "name": "Thomas Zaffalon", "url": "https://www.tommyzaffa.com/"},
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListOrder": "https://schema.org/ItemListOrderDescending",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "item": {"@type": "WebSite", "name": "Pasta Lovers", "url": "https://pastalovers.com.au", "creator": {"@type": "Person", "name": "Thomas Zaffalon"}}},
+            {"@type": "ListItem", "position": 2, "item": {"@type": "WebSite", "name": "La Brace", "url": "https://labrace.ch", "creator": {"@type": "Person", "name": "Thomas Zaffalon"}}},
+            {"@type": "ListItem", "position": 3, "item": {"@type": "WebApplication", "name": "PoPaCi Studio", "url": "https://studio.popaci.com", "applicationCategory": "BusinessApplication", "author": {"@type": "Person", "name": "Thomas Zaffalon"}}},
+            {"@type": "ListItem", "position": 4, "item": {"@type": "WebSite", "name": "Keyo Tattoo Studio", "url": "https://keyotattoostudio.ch", "creator": {"@type": "Person", "name": "Thomas Zaffalon"}}},
+            {"@type": "ListItem", "position": 5, "item": {"@type": "VideoGame", "name": "Echo Maze", "url": "https://www.echomaze.quest", "applicationCategory": "Game", "author": {"@type": "Person", "name": "Thomas Zaffalon"}}},
+            {"@type": "ListItem", "position": 6, "item": {"@type": "WebSite", "name": "Samuel Rhawi By Nursel", "url": "https://samuelrhawibynursel.com", "creator": {"@type": "Person", "name": "Thomas Zaffalon"}}},
+            {"@type": "ListItem", "position": 7, "item": {"@type": "WebSite", "name": "Ondus Tattoo", "url": "https://www.ondustattoo.ink", "creator": {"@type": "Person", "name": "Thomas Zaffalon"}}},
+            {"@type": "ListItem", "position": 8, "item": {"@type": "WebSite", "name": "Merge Film Festival", "url": "https://www.mergefestival.ch", "creator": {"@type": "Person", "name": "Thomas Zaffalon"}}},
+            {"@type": "ListItem", "position": 9, "item": {"@type": "WebSite", "name": "PoPaCi", "url": "https://www.popaci.com", "creator": {"@type": "Person", "name": "Thomas Zaffalon"}}},
+            {"@type": "ListItem", "position": 10, "item": {"@type": "WebSite", "name": "Pronto Pizza da Fabio", "url": "https://www.ristoranteppdafabio.it", "creator": {"@type": "Person", "name": "Thomas Zaffalon"}}},
+            {"@type": "ListItem", "position": 11, "item": {"@type": "MobileApplication", "name": "TurnTale", "url": "https://turntale-indol.vercel.app", "applicationCategory": "GameApplication", "author": {"@type": "Person", "name": "Thomas Zaffalon"}}},
+            {"@type": "ListItem", "position": 12, "item": {"@type": "WebApplication", "name": "WeathAff", "url": "https://tommyzaffa.github.io/weathaff/", "applicationCategory": "Weather", "author": {"@type": "Person", "name": "Thomas Zaffalon"}}}
           ]
         }
-        </script>
+      }
+    ]
+  }
+  </script>
 
-        <!-- Favicon -->
-        <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&amp;family=Inter+Tight:wght@300;400;500&amp;display=swap">
+  <link rel="preload" as="image" href="/images/photos/popaci-studio.webp">
+  <link rel="stylesheet" href="/css/v2.css?v=10">
+</head>
 
-        <link rel="preload" as="image" href="/images/zaffalon_page_7.webp">
-        <base target="_blank">
-        <link rel="stylesheet" href="../css/zaffalon_page_7.css">
-        <link rel="stylesheet" href="../css/zaffalon_aesthetic.css?v=20260520-3">
-    </head>
-    <!-- BODY -->
-    <body>
-        <div id="apps_section">
-            <div class="sheet-handle" aria-label="Drag handle"></div>
-            <div class="sheet-content">
-            <!-- APPS & WEBSITES SECTION -->
-            <div id="apps_sites">
-                <h1>Apps &amp; Websites</h1>
-                <p>
-                    Here you'll find the apps and websites I've built, some made for myself to explore new technologies, others created at the request of people who trusted me with their projects.
-                </p>
-                <br>
-            </div>
-            <hr><br>
-            <!-- PASTA LOVERS -->
-            <div id="pasta_lovers">
-                <h2>Pasta Lovers</h2> <br>
-                <span class="badge">WEBSITE</span>
-                <p>
-                    Pasta Lovers is a fresh pasta restaurant in Australia, and my first website built for a client outside Europe. The job was different from anything I had done before: they already had a site made with Wix, so I rebuilt the whole thing custom from scratch while keeping their existing Wix ordering page alive. The challenge was mixing the two worlds — a hand-coded custom site that flows seamlessly into the Wix order system — so the customer never feels the seam and the staff can keep managing orders exactly as they always have.
-                </p>
-                <!-- ICON -->
-                <a href="https://pastalovers.com.au">
-                    <img src="../images/pastalovers.png" alt="Pasta Lovers" class="icon">
-                </a>
-                <br>
-            </div>
-            <hr>
-            <!-- LA BRACE -->
-            <div id="la_brace">
-                <h2>La Brace</h2> <br>
-                <span class="badge">WEBSITE</span>
-                <p>
-                    La Brace is a steakhouse and pizzeria in Manno, near Lugano, specialising in dry aged meat cooked over open coals. The owners wanted to leave behind a dated WordPress site and get something that felt like the restaurant itself, so I built the whole thing from scratch as a cinematic, bilingual showcase: a full-screen video hero that opens up as you scroll, kinetic typography, a horizontal gallery driven by the scroll and the à la carte and wine menus served from a single data file the staff can update on their own. It's hand-coded in vanilla HTML, CSS and JavaScript with GSAP and Lenis, with self-hosted fonts and a consent-gated map so that no data leaves the site before the visitor agrees.
-                </p>
-                <!-- ICON -->
-                <a href="https://labrace.ch">
-                    <img src="../images/labrace.png" alt="La Brace" class="icon">
-                </a>
-                <br>
-            </div>
-            <hr>
-            <!-- POPACI STUDIO (MANAGEMENT PLATFORM) -->
-            <div id="popaci_studio">
-                <h2>PoPaCi Studio</h2> <br>
-                <span class="badge">WEB APP</span>
-                <p>
-                    PoPaCi Studio is the internal management platform I designed and built from the ground up for PoPaCi and the Merge Film Festival team — my first large-scale full-stack project. It brings the whole studio into a single private, invite-only workspace: a Celtx-style screenplay editor with PDF export, project boards with granular visibility, a shared production calendar, team to-dos, a chat with video calls, a collaborative whiteboard and a dedicated festival module. It's built with React (Next.js 15) and TypeScript on top of Supabase (PostgreSQL, Auth, Storage), with Row Level Security enforced server-side, and deployed on Vercel.
-                </p>
-                <!-- ICON -->
-                <a href="https://studio.popaci.com">
-                    <img src="../images/popaci_studio.jpg" alt="PoPaCi Studio management platform" class="icon">
-                </a>
-                <br>
-            </div>
-            <hr>
-            <!-- KEYO TATTOO STUDIO -->
-            <div id="keyo_tattoo">
-                <h2>Keyo Tattoo Studio</h2> <br>
-                <span class="badge">WEBSITE</span>
-                <p>
-                    Keyo Tattoo Studio was a more complex but truly fascinating project. The owner wanted to preserve the studio's established brand identity while adopting a style very close to that of a New York tattoo studio's website. In the end, we achieved exactly the result we were hoping for, and he was thrilled with it.
-                </p>
-                <!-- ICON -->
-                <a href="https://keyotattoostudio.ch">
-                    <img src="../images/keyo.jpg" alt="Keyo Tattoo Studio" class="icon">
-                </a>
-                <br>
-            </div>
-            <hr>
-            <!-- ECHO MAZE SECTION -->
-            <div id="echo_maze">
-                <h2>Echo Maze</h2> <br>
-                <span class="badge">WEBSITE</span>
-                <p>
-                    Echo Maze is my first single-player metroidvania — an idea I had been carrying around for a while and finally brought to life. It runs straight in the browser as a website, with no downloads, no loading screens, and free for everyone. The gameplay is fast, dynamic, and engaging, designed to pull you in from the very first move.
-                </p>
-                <!-- ICON -->
-                <a href="https://www.echomaze.quest">
-                    <img src="../images/echo_maze.svg" alt="Echo Maze" class="icon">
-                </a>
-                <br>
-            </div>
-            <hr>
-            <!-- SAMUEL RHAWI BY NURSEL -->
-            <div id="samuel_rhawi">
-                <h2>Samuel Rhawi By Nursel</h2> <br>
-                <span class="badge">WEBSITE</span>
-                <p>
-                    This was my first website for a more established fashion business: Samuel Rhawi, a recognized leather and luxury clothing brand with an important presence in Istanbul. The goal was to create a refined online identity for the Lugano boutique, presenting Nursel's showroom as the local Swiss home of the maison while keeping a clear connection to the brand's wider story.
-                </p>
-                <!-- ICON -->
-                <a href="https://samuelrhawibynursel.com">
-                    <img src="../images/samuel-rhawi.webp" alt="Samuel Rhawi By Nursel" class="icon">
-                </a>
-                <br>
-            </div>
-            <hr>
-            <!-- ONDUS TATTOO -->
-            <div id="ondus_tattoo">
-                <h2>Ondus Tattoo</h2> <br>
-                <span class="badge">WEBSITE</span>
-                <p>
-                    Ondus Tattoo, based in Lugano, marked my first step into creating websites for independent businesses without an online presence.
+<body>
 
-By listening closely to the owner’s style and intentions, I translated their identity into a fluid and dynamic website — staying true to their aesthetic while making it work naturally in a digital space.
-                </p>
-                <!-- ICON -->
-                <a href="https://www.ondustattoo.ink">
-                    <img src="../images/ondus.jpg" alt="Ondus Tattoo" class="icon">
-                </a>
-                <br>
+  <header class="hdr">
+    <a class="hdr__mark" href="/" aria-label="Thomas Zaffalon, home">
+      <span class="hdr__dot"></span> Thomas Zaffalon
+    </a>
+    <span class="hdr__status">02 &nbsp;·&nbsp; Apps &amp; Websites</span>
+    <button class="menu-btn" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+      <span data-nav-label>Menu</span>
+      <span class="menu-btn__lines" aria-hidden="true"><i></i><i></i></span>
+    </button>
+  </header>
+
+  <nav class="nav" id="site-nav" aria-label="Main">
+    <ul class="nav__list">
+      <li class="nav__item"><a class="nav__link" href="/shortfilms/"><span class="nav__idx">01</span><span class="nav__word">Short Films</span></a></li>
+      <li class="nav__item"><a class="nav__link" href="/apps/" aria-current="page"><span class="nav__idx">02</span><span class="nav__word">Apps &amp; Websites</span></a></li>
+      <li class="nav__item"><a class="nav__link" href="/jobs-stages/"><span class="nav__idx">03</span><span class="nav__word">Jobs &amp; Stages</span></a></li>
+      <li class="nav__item"><a class="nav__link" href="/music/"><span class="nav__idx">04</span><span class="nav__word">Music</span></a></li>
+      <li class="nav__item"><a class="nav__link" href="/education/"><span class="nav__idx">05</span><span class="nav__word">Education</span></a></li>
+      <li class="nav__item"><a class="nav__link" href="/contact/"><span class="nav__idx">06</span><span class="nav__word">Contact</span></a></li>
+    </ul>
+    <div class="nav__media" aria-hidden="true">
+      <img src="/images/photos/portrait.webp" alt="" width="1254" height="1254" loading="lazy">
+    </div>
+    <div class="nav__foot">
+      <a href="mailto:thomas@tommyzaffa.com" target="_blank" rel="noopener">Email</a>
+      <a href="https://www.instagram.com/tommy.zaffa/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.linkedin.com/in/tommyzaffa" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://t.me/tommyzaffa" target="_blank" rel="noopener">Telegram</a>
+    </div>
+  </nav>
+
+  <main class="page">
+
+    <section class="page-hero">
+      <div class="page-hero__txt">
+        <span class="eyebrow" data-reveal>Apps &amp; Websites</span>
+        <h1 class="h-xl" data-reveal>
+          <span class="line-mask"><span>Apps &amp;</span></span>
+          <span class="line-mask"><span>Websites</span></span>
+        </h1>
+        <p class="lead" data-reveal>
+          Twelve things that are online right now. Restaurants, tattoo studios,
+          a fashion boutique, a film festival, a management platform and a
+          couple of games I built because I wanted to play them.
+          All of it written by hand, and all of it still being tweaked.
+        </p>
+      </div>
+      <figure class="page-hero__media clip-img" style="margin:0">
+        <img src="/images/photos/popaci-studio.webp" alt="PoPaCi Studio" width="1080" height="1440" fetchpriority="high">
+      </figure>
+    </section>
+
+    <ul class="plist">
+
+      <li class="pitem" data-hover-img="/images/pastalovers.png">
+        <a class="pitem__link" href="https://pastalovers.com.au" target="_blank" rel="noopener" data-cursor="Visit">
+          <span class="pitem__idx">01</span>
+          <div class="pitem__head">
+            <h2 class="pitem__title">Pasta Lovers</h2>
+            <div class="pitem__tags">
+              <span class="tag">Website</span>
+              <span class="tag">Australia</span>
+              <span class="tag">Wix integration</span>
             </div>
-            <hr>
-            <!-- MERGE FILM FESTIVAL SECTION -->
-            <div id="merge_film_festival">
-                <h2>Merge Film Festival</h2> <br>
-                <span class="badge">WEBSITE</span>
-                <p>
-                    Merge Film Festival is the first Swiss festival dedicated to audiovisual works created with artificial intelligence. Founded by my colleagues from CISA — who started the company PoPaCi — they asked me to build their digital home: a minimal, elegant, and fluid portal where visitors can discover what the festival is about, how it works, and what to expect. The site launched in May 2026.
-                </p>
-                <!-- ICON -->
-                <a href="https://www.mergefestival.ch">
-                    <img src="../images/mff.jpg" alt="Merge Film Festival" class="icon">
-                </a>
-                <br>
+          </div>
+          <figure class="pitem__thumb"><img src="/images/pastalovers.png" alt="" loading="lazy"></figure>
+          <p class="pitem__desc">
+            A fresh pasta restaurant in Australia and my first client outside
+            Europe. They were stuck on Wix, so I rebuilt the whole site by
+            hand and plugged their existing ordering page back into it, so
+            nothing changed for the customers or for the staff.
+          </p>
+          <span class="pitem__go">Live <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.3"/></svg></span>
+        </a>
+      </li>
+
+      <li class="pitem" data-hover-img="/images/labrace.png">
+        <a class="pitem__link" href="https://labrace.ch" target="_blank" rel="noopener" data-cursor="Visit">
+          <span class="pitem__idx">02</span>
+          <div class="pitem__head">
+            <h2 class="pitem__title">La Brace</h2>
+            <div class="pitem__tags">
+              <span class="tag">Website</span>
+              <span class="tag tag--hl">GSAP · Lenis</span>
+              <span class="tag">Bilingual</span>
             </div>
-            <hr>
-            <!-- POPACI -->
-            <div id="popaci">
-                <h2>PoPaCi</h2> <br>
-                <span class="badge">WEBSITE</span>
-                <p>
-                    I created the website for PoPaCi, a company founded by my former colleagues from film school. Following this collaboration, I joined the company as its CTO (Chief Technology Officer), managing its IT infrastructure and digital presence — including the development of their website and other technical aspects. The site launched in May 2026.
-                </p>
-                <!-- ICON -->
-                <a href="https://www.popaci.com">
-                    <img src="../images/popaci.jpg" alt="PoPaCi" class="icon">
-                </a>
-                <br>
+          </div>
+          <figure class="pitem__thumb"><img src="/images/labrace.png" alt="" loading="lazy"></figure>
+          <p class="pitem__desc">
+            A steakhouse near Lugano doing dry aged meat over open coals. They
+            wanted to leave WordPress behind, so I rebuilt the site from
+            scratch: a video hero that opens as you scroll, kinetic type, a
+            scroll-driven gallery, and menus the staff update from one data
+            file.
+          </p>
+          <span class="pitem__go">Live <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.3"/></svg></span>
+        </a>
+      </li>
+
+      <li class="pitem" data-hover-img="/images/popaci_studio.jpg">
+        <a class="pitem__link" href="https://studio.popaci.com" target="_blank" rel="noopener" data-cursor="Visit">
+          <span class="pitem__idx">03</span>
+          <div class="pitem__head">
+            <h2 class="pitem__title">PoPaCi Studio</h2>
+            <div class="pitem__tags">
+              <span class="tag">Web App</span>
+              <span class="tag tag--hl">Next.js · TypeScript · Supabase</span>
+              <span class="tag">Full-stack</span>
             </div>
-            <hr>
-            <!-- PRONTO PIZZA DA FABIO SECTION -->
-            <div id="pronto_pizza_da_fabio">
-                <h2>Pronto Pizza da Fabio</h2> <br>
-                <span class="badge">WEBSITE</span>
-                <p>
-                    This was my first published website for a real business — a restaurant and pizzeria that had been operating for years but had no online presence yet. It gave me the chance to put myself to the test by building and launching a site for an already established, active business.
-                </p>
-                <!-- ICON -->
-                <a href="https://www.ristoranteppdafabio.it">
-                    <img src="../images/prontopizza.png" alt="Pronto Pizza da Fabio" class="icon">
-                </a>
-                <br>
+          </div>
+          <figure class="pitem__thumb"><img src="/images/popaci_studio.jpg" alt="" loading="lazy"></figure>
+          <p class="pitem__desc">
+            The internal platform I designed and built for PoPaCi and the
+            Merge Film Festival team, and the biggest thing I've taken on so
+            far. A
+            screenplay editor with PDF export, project boards, a shared
+            calendar, chat with video calls, a collaborative whiteboard and a
+            festival module, all behind invite-only auth with row level
+            security.
+          </p>
+          <span class="pitem__go">Live <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.3"/></svg></span>
+        </a>
+      </li>
+
+      <li class="pitem" data-hover-img="/images/keyo.jpg">
+        <a class="pitem__link" href="https://keyotattoostudio.ch" target="_blank" rel="noopener" data-cursor="Visit">
+          <span class="pitem__idx">04</span>
+          <div class="pitem__head">
+            <h2 class="pitem__title">Keyo Tattoo Studio</h2>
+            <div class="pitem__tags">
+              <span class="tag">Website</span>
+              <span class="tag">Brand identity</span>
+              <span class="tag">Lugano</span>
             </div>
-            <hr>
-            <!-- TURNTALE SECTION -->
-            <div id="turntale">
-                <h2>TurnTale</h2> <br>
-                <span class="badge">APP</span>
-                <p>
-                    TurnTale is a narrative game that breaks the mold of typical mobile games: it has real objectives — no endless grind, no pointless loops. It's built for asynchronous multiplayer, so you and your friends share the same story without ever needing to be online at the same time. Take your turn when you want, pick it back up later. Still in beta — grab some friends and give it a go.
-                </p>
-                <!-- ICON -->
-                <a href="https://turntale-indol.vercel.app">
-                    <img src="../images/turntale.jpg" alt="TurnTale" class="icon">
-                </a>
-                <br>
+          </div>
+          <figure class="pitem__thumb"><img src="/images/keyo.jpg" alt="" loading="lazy"></figure>
+          <p class="pitem__desc">
+            The brief contradicted itself on purpose: keep the studio's identity,
+            but make it feel like a New York tattoo shop. It took a few passes,
+            and the owner seems happy with where we landed.
+          </p>
+          <span class="pitem__go">Live <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.3"/></svg></span>
+        </a>
+      </li>
+
+      <li class="pitem" data-hover-img="/images/echo_maze.svg">
+        <a class="pitem__link" href="https://www.echomaze.quest" target="_blank" rel="noopener" data-cursor="Play">
+          <span class="pitem__idx">05</span>
+          <div class="pitem__head">
+            <h2 class="pitem__title">Echo Maze</h2>
+            <div class="pitem__tags">
+              <span class="tag">Browser Game</span>
+              <span class="tag">Metroidvania</span>
+              <span class="tag">Free</span>
             </div>
-            <hr>
-            <!-- WEATHAFF SECTION -->
-            <div id="weathaff">
-                <h2>WeathAff</h2> <br>
-                <span class="badge">APP</span>
-                <p>
-                    WeathAff is a weather app built as a Progressive Web App — usable directly from the browser and installable on your smartphone like a native app. I made it for myself as my first dive into the world of app development. Simple, fast, and personal.
-                </p>
-                <!-- ICON -->
-                <a href="https://tommyzaffa.github.io/weathaff/">
-                    <img src="../images/weathaff.png" alt="WeathAff" class="icon">
-                </a>
-                <br>
+          </div>
+          <figure class="pitem__thumb"><img src="/images/echo_maze.svg" alt="" loading="lazy"></figure>
+          <p class="pitem__desc">
+            A single-player metroidvania I had in my head for years. It runs straight
+            in the browser: no download, no launcher, no price.
+          </p>
+          <span class="pitem__go">Play <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.3"/></svg></span>
+        </a>
+      </li>
+
+      <li class="pitem" data-hover-img="/images/samuel-rhawi.webp">
+        <a class="pitem__link" href="https://samuelrhawibynursel.com" target="_blank" rel="noopener" data-cursor="Visit">
+          <span class="pitem__idx">06</span>
+          <div class="pitem__head">
+            <h2 class="pitem__title">Samuel Rhawi By Nursel</h2>
+            <div class="pitem__tags">
+              <span class="tag">Website</span>
+              <span class="tag">Fashion</span>
+              <span class="tag">Istanbul · Lugano</span>
             </div>
-            <hr>
-            <!-- HOME SECTION -->
-            <div id="home">
-                <h3>GO HOME</h3>
-                <!-- ICON -->
-                <a href="/" target="_self">
-                    <img src="../images/home.png" alt="home" class="icon">
-                </a>
+          </div>
+          <figure class="pitem__thumb"><img src="/images/samuel-rhawi.webp" alt="" loading="lazy"></figure>
+          <p class="pitem__desc">
+            My first job for an established fashion house. The Lugano boutique
+            needed its own presence without breaking away from the maison's
+            wider identity.
+          </p>
+          <span class="pitem__go">Live <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.3"/></svg></span>
+        </a>
+      </li>
+
+      <li class="pitem" data-hover-img="/images/ondus.jpg">
+        <a class="pitem__link" href="https://www.ondustattoo.ink" target="_blank" rel="noopener" data-cursor="Visit">
+          <span class="pitem__idx">07</span>
+          <div class="pitem__head">
+            <h2 class="pitem__title">Ondus Tattoo</h2>
+            <div class="pitem__tags">
+              <span class="tag">Website</span>
+              <span class="tag">First client</span>
+              <span class="tag">Lugano</span>
             </div>
-            <p class="privacy-mini"><a href="/privacy.html" target="_self">Privacy &amp; Cookie Policy</a></p>
+          </div>
+          <figure class="pitem__thumb"><img src="/images/ondus.jpg" alt="" loading="lazy"></figure>
+          <p class="pitem__desc">
+            My first site for an independent business with no presence online
+            at all. The look was already there in the studio. My job was
+            getting it onto a screen without losing it.
+          </p>
+          <span class="pitem__go">Live <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.3"/></svg></span>
+        </a>
+      </li>
+
+      <li class="pitem" data-hover-img="/images/mff.jpg">
+        <a class="pitem__link" href="https://www.mergefestival.ch" target="_blank" rel="noopener" data-cursor="Visit">
+          <span class="pitem__idx">08</span>
+          <div class="pitem__head">
+            <h2 class="pitem__title">Merge Film Festival</h2>
+            <div class="pitem__tags">
+              <span class="tag">Website</span>
+              <span class="tag tag--hl">First Swiss AI film festival</span>
+              <span class="tag">2026</span>
             </div>
-        </div>
-        <script src="../js/zaffalon_page_7.js" defer></script>
-    </body>
+          </div>
+          <figure class="pitem__thumb"><img src="/images/mff.jpg" alt="" loading="lazy"></figure>
+          <p class="pitem__desc">
+            The first Swiss festival for films made with artificial
+            intelligence, founded by my former CISA classmates. They asked for
+            something minimal, fast and clear about what the festival actually
+            is.
+          </p>
+          <span class="pitem__go">Live <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.3"/></svg></span>
+        </a>
+      </li>
+
+      <li class="pitem" data-hover-img="/images/popaci.jpg">
+        <a class="pitem__link" href="https://www.popaci.com" target="_blank" rel="noopener" data-cursor="Visit">
+          <span class="pitem__idx">09</span>
+          <div class="pitem__head">
+            <h2 class="pitem__title">PoPaCi</h2>
+            <div class="pitem__tags">
+              <span class="tag">Website</span>
+              <span class="tag">Production company</span>
+              <span class="tag">2026</span>
+            </div>
+          </div>
+          <figure class="pitem__thumb"><img src="/images/popaci.jpg" alt="" loading="lazy"></figure>
+          <p class="pitem__desc">
+            I built the site for PoPaCi, a company started by my film school
+            classmates. The collaboration went well enough that I ended up joining
+            as CTO.
+          </p>
+          <span class="pitem__go">Live <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.3"/></svg></span>
+        </a>
+      </li>
+
+      <li class="pitem" data-hover-img="/images/prontopizza.png">
+        <a class="pitem__link" href="https://www.ristoranteppdafabio.it" target="_blank" rel="noopener" data-cursor="Visit">
+          <span class="pitem__idx">10</span>
+          <div class="pitem__head">
+            <h2 class="pitem__title">Pronto Pizza da Fabio</h2>
+            <div class="pitem__tags">
+              <span class="tag">Website</span>
+              <span class="tag">Restaurant</span>
+              <span class="tag">First one shipped</span>
+            </div>
+          </div>
+          <figure class="pitem__thumb"><img src="/images/prontopizza.png" alt="" loading="lazy"></figure>
+          <p class="pitem__desc">
+            The first site I ever put online for a real business: a pizzeria that had
+            been running for years without a single page of its own. It was how
+            I found out whether I could do this at all.
+          </p>
+          <span class="pitem__go">Live <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.3"/></svg></span>
+        </a>
+      </li>
+
+      <li class="pitem" data-hover-img="/images/turntale.jpg">
+        <a class="pitem__link" href="https://turntale-indol.vercel.app" target="_blank" rel="noopener" data-cursor="Play">
+          <span class="pitem__idx">11</span>
+          <div class="pitem__head">
+            <h2 class="pitem__title">TurnTale</h2>
+            <div class="pitem__tags">
+              <span class="tag">App</span>
+              <span class="tag">Async multiplayer</span>
+              <span class="tag">Beta</span>
+            </div>
+          </div>
+          <figure class="pitem__thumb"><img src="/images/turntale.jpg" alt="" loading="lazy"></figure>
+          <p class="pitem__desc">
+            A narrative game with an actual ending, no daily streaks and no infinite
+            loop. You and your friends build one story without ever having to be
+            online at the same time. Still in beta.
+          </p>
+          <span class="pitem__go">Play <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.3"/></svg></span>
+        </a>
+      </li>
+
+      <li class="pitem" data-hover-img="/images/weathaff.png">
+        <a class="pitem__link" href="https://tommyzaffa.github.io/weathaff/" target="_blank" rel="noopener" data-cursor="Open">
+          <span class="pitem__idx">12</span>
+          <div class="pitem__head">
+            <h2 class="pitem__title">WeathAff</h2>
+            <div class="pitem__tags">
+              <span class="tag">App</span>
+              <span class="tag">PWA</span>
+              <span class="tag">Built for myself</span>
+            </div>
+          </div>
+          <figure class="pitem__thumb"><img src="/images/weathaff.png" alt="" loading="lazy"></figure>
+          <p class="pitem__desc">
+            A weather app you install straight from the browser. My first go
+            at app development, built because I wanted one that didn't ask for
+            half my data.
+          </p>
+          <span class="pitem__go">Open <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.3"/></svg></span>
+        </a>
+      </li>
+
+    </ul>
+
+    <section class="band band--shots">
+      <figure>
+        <div class="clip-img"><img src="/images/photos/site-labrace.webp?v=2" alt="La Brace home page" width="1200" height="750" loading="lazy"></div>
+        <figcaption>La Brace</figcaption>
+      </figure>
+      <figure>
+        <div class="clip-img"><img src="/images/photos/site-keyo.webp" alt="Keyo Tattoo Studio home page" width="1200" height="750" loading="lazy"></div>
+        <figcaption>Keyo Tattoo Studio</figcaption>
+      </figure>
+      <figure>
+        <div class="clip-img"><img src="/images/photos/site-samuel.webp" alt="Samuel Rhawi home page" width="1200" height="750" loading="lazy"></div>
+        <figcaption>Samuel Rhawi</figcaption>
+      </figure>
+      <figure>
+        <div class="clip-img"><img src="/images/photos/site-mff.webp" alt="Merge Film Festival home page" width="1200" height="750" loading="lazy"></div>
+        <figcaption>Merge Film Festival</figcaption>
+      </figure>
+    </section>
+
+    <div class="marquee" aria-hidden="true" style="margin-top:clamp(60px,9vw,130px)">
+      <div class="marquee__track" data-marquee="0.8">
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Next.js</span><span>Supabase</span>
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Next.js</span><span>Supabase</span>
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Next.js</span><span>Supabase</span>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="foot">
+    <div class="foot__top">
+      <div>
+        <span class="eyebrow" data-reveal>Need a site?</span>
+        <a class="foot__mail" href="mailto:thomas@tommyzaffa.com" target="_blank" rel="noopener" data-cursor="Write">thomas@<br>tommyzaffa.com</a>
+      </div>
+      <div class="foot__socials">
+        <a href="https://www.instagram.com/tommy.zaffa/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.linkedin.com/in/tommyzaffa" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://t.me/tommyzaffa" target="_blank" rel="noopener">Telegram</a>
+        <a href="/">Home</a>
+      </div>
+    </div>
+    <div class="foot__bottom">
+      <span>© <span data-year>2026</span> Thomas Zaffalon &nbsp;·&nbsp; designed &amp; coded by me</span>
+      <a href="/privacy.html">Privacy &amp; Cookie Policy</a>
+    </div>
+  </footer>
+
+  <script src="/js/v2.js?v=10" defer></script>
+</body>
 </html>
