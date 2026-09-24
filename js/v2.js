@@ -248,6 +248,9 @@
     void curtain.offsetHeight;                 // flush the covering state
     curtain.classList.remove('is-cover');
     curtain.classList.add('is-out');
+    /* once it has run off the top, drop the class so the sheet goes back to
+       hidden instead of sitting above the fold as a live orange layer */
+    setTimeout(function () { curtain.classList.remove('is-out'); }, 900);
   }
 
   /* arriving from an internal link: the sheet is still covering, let it

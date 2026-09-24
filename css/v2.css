@@ -33,6 +33,11 @@
 html{
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  /* iOS paints the rubber band area with the canvas background and can reveal
+     fixed layers parked just off screen, so the root carries the colour too and
+     the elastic scroll is switched off */
+  background: var(--bg);
+  overscroll-behavior-y: none;
 }
 
 /* no scrollbars anywhere — scrolling still works */
@@ -236,8 +241,13 @@ body.cursor-ready .cursor{ opacity: 1; }
   background: var(--accent);
   transform: translate3d(0, 100%, 0);
   pointer-events: none;
-  will-change: transform;
+  /* parked off screen it must not paint at all: a permanent compositing layer
+     of solid orange is exactly what iOS flashed during an elastic scroll */
+  visibility: hidden;
 }
+.curtain.is-in,
+.curtain.is-cover,
+.curtain.is-out{ visibility: visible; will-change: transform; }
 .curtain.is-in{
   transform: translate3d(0, 0, 0);
   transition: transform .6s var(--ease-io);
@@ -407,8 +417,24 @@ body.nav-open .nav__item:nth-child(7) .nav__link{ transition-delay: .46s; }
 
 @media (max-width: 900px){
   .nav{ grid-template-columns: 1fr; }
-  .nav__media{ display: none; }
-  .nav__list{ padding-bottom: clamp(80px, 14vh, 130px); }
+  /* no room for a second column, so the same photo slides behind the words
+     instead of being dropped */
+  .nav__media{
+    position: absolute; inset: 0;
+    background: none;
+  }
+  .nav__media img{ object-position: center 26%; }
+  .nav__media::after{
+    background: linear-gradient(to bottom,
+      rgba(18,18,21,.62) 0%,
+      rgba(18,18,21,.88) 42%,
+      rgba(18,18,21,.94) 72%,
+      var(--bg-soft) 100%);
+  }
+  .nav__list{
+    position: relative; z-index: 1;
+    padding-bottom: clamp(80px, 14vh, 130px);
+  }
 }
 
 /* ---------------------------------------------------------
@@ -850,6 +876,10 @@ body.nav-open .nav__item:nth-child(7) .nav__link{ transition-delay: .46s; }
 }
 .band--marks .clip-img img{
   width: 100%; height: 100%;
+  /* a grid item defaults to min-height:auto, which for an image means its own
+     aspect ratio wins over height:100%. The square and portrait crests grew
+     past the tile and got clipped, so the automatic minimum is switched off. */
+  min-width: 0; min-height: 0;
   object-fit: contain;
   filter: none;
   /* the shared zoom in reveal would push a contained logo outside its tile */
