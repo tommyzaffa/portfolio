@@ -23,6 +23,41 @@
   }
   document.body.classList.add('is-ready');
 
+  /* ------------------------------------------------------- facts
+     v2.js adds .is-in to .facts and the CSS staggers the four figures;
+     here each number counts up from zero on the same stagger */
+  var facts = document.querySelector('.facts');
+  if (facts && !reduced && 'IntersectionObserver' in window) {
+    var pad = function (v, w) { var s = String(v); while (s.length < w) s = '0' + s; return s; };
+    var nums = [].slice.call(facts.querySelectorAll('.fact b')).map(function (b) {
+      var txt = b.textContent.trim();
+      var n = { el: b, to: parseInt(txt, 10), w: txt.length };
+      if (!isNaN(n.to)) b.textContent = pad(0, n.w);
+      return n;
+    }).filter(function (n) { return !isNaN(n.to); });
+
+    /* timers, not rAF: the count is time based, so it still lands on the
+       real figure when the tab is in the background and rAF is paused */
+    var countUp = function (n, delay) {
+      var dur = 1500;
+      setTimeout(function () {
+        var start = performance.now();
+        (function tick() {
+          var p = clamp((performance.now() - start) / dur, 0, 1);
+          n.el.textContent = pad(Math.round(n.to * (1 - Math.pow(1 - p, 3))), n.w);
+          if (p < 1) setTimeout(tick, 30);
+        })();
+      }, delay);
+    };
+
+    var factsIo = new IntersectionObserver(function (entries) {
+      if (!entries[0].isIntersecting) return;
+      factsIo.disconnect();
+      nums.forEach(function (n, i) { countUp(n, 150 + i * 120); });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+    factsIo.observe(facts);
+  }
+
   /* ------------------------------------------------------- gallery */
   var gal = document.querySelector('.gal');
   if (!gal) return;

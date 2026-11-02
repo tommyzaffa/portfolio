@@ -399,22 +399,41 @@
 }
 .about__cols p{ margin: 0; color: var(--ink-2); font-size: 15px; line-height: 1.65; }
 
+/* the block itself stays put: the top rule draws in, then the figures
+   come up one after the other while v2-home.js counts the numbers up */
+.facts[data-reveal]{ opacity: 1; transform: none; }
 .facts{
+  position: relative;
   margin-top: clamp(38px, 6vw, 72px);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  border-top: 1px solid var(--line);
 }
+.facts::before{
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 1px; background: var(--line);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 1.3s var(--ease);
+}
+.facts.is-in::before{ transform: scaleX(1); }
 .fact{
   padding: clamp(18px, 2.4vw, 30px) 0;
   border-bottom: 1px solid var(--line);
   padding-right: 18px;
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .8s var(--ease), transform 1s var(--ease);
 }
+.facts.is-in .fact{ opacity: 1; transform: none; }
+.facts.is-in .fact:nth-child(2){ transition-delay: .12s; }
+.facts.is-in .fact:nth-child(3){ transition-delay: .24s; }
+.facts.is-in .fact:nth-child(4){ transition-delay: .36s; }
 .fact b{
   display: block;
   font-family: var(--display); font-weight: 800;
   font-size: clamp(30px, 3.6vw, 56px);
   line-height: .9; letter-spacing: -.04em;
+  font-variant-numeric: tabular-nums;
   color: var(--accent);
 }
 .fact span{
